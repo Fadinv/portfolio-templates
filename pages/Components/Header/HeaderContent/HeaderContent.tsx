@@ -15,7 +15,7 @@ const HeaderContent = () => {
                         display: "flex",
                         flexDirection: "column",
                     }}>
-                        <h1 className={styles.header}>ALPINES</h1>
+                        <h1 className={styles.header}>ALPINE</h1>
                         <h2 className={styles.description}>SOCIAL MEDIA MARKETING PLATFORM</h2>
                     </div>
 
