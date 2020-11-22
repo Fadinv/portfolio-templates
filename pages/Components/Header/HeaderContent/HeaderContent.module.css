@@ -1,0 +1,70 @@
+.HeaderContent {
+    margin: 0 14.5vw 0;
+    height: 100%;
+    display: flex;
+    line-height: 1.4;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: -0.2em 0 1em rgba(0, 0, 0, 1);
+}
+
+.sizeContainer {
+    width: calc(27.125em + 8.8125em);
+    padding: 4.75em 4.0625em 0;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-size: 4em;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.25em;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+}
+
+.text {
+    font-family: "Segoe UI";
+    line-height: 1.5;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.125em;
+    margin-top: 1.666em;
+}
+
+@media (max-width: 65em) {
+    .HeaderContent {
+        margin: 1.5vw 5vw 0;
+    }
+    .sizeContainer {
+        padding: 1em 2em 0;
+    }
+}
+
+@media (max-width: 69.5em) {
+    .textContainer {
+        /*flex-direction: row;*/
+    }
+    .sizeContainer {
+        width: 100%;
+    }
+    .text {
+        /*margin-left: 5em;*/
+    }
+}
+
+@media (max-width: 25em) {
+    .text {
+        margin-top: 0.25em;
+    }
+}

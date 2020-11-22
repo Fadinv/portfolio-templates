@@ -1,0 +1,56 @@
+.Menu {
+    margin-left: 4.375em;
+}
+
+.button {
+    font-size: 2.5em;
+    display: none;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 0 0.5em;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 0.2em;
+    border: none;
+    color: white;
+    outline: none;
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, .7);
+    transition: box-shadow .3s ease-out, background-color .3s ease-out;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.button:focus {
+    box-shadow: 0 0 0 0.1em rgba(15, 240, 240, .3);
+}
+
+.ul {
+    margin-left: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.ul > * + li {
+    margin-left: 1.875em;
+}
+
+.li {
+    font-size: 1rem;
+    text-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, .7);
+}
+
+
+@media (max-width: 500px) {
+    .ul {
+        display: none;
+    }
+
+    .button {
+        display: flex;
+    }
+}

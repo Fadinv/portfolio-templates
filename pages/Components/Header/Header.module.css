@@ -1,0 +1,28 @@
+.Header {
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+.secondLayer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    height: 100%;
+    width: 100%;
+}
+.wrapperImg {
+    z-index: -100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 100%;
+    min-height: 440px;
+    object-fit: cover;
+}

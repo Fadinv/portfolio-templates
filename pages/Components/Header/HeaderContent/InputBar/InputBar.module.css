@@ -1,0 +1,96 @@
+.InputBar {
+    margin-top: 1.5625em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    vertical-align: center;
+}
+
+.InputBar > * {
+    margin-right: .5em;
+    margin-bottom: .5em;
+}
+
+.input {
+    width: 67%;
+    font-size: 0.875em;
+    padding: 0.5625em 2.1875em;
+    border: 0.1429em solid rgba(255, 255, 255, 0.4);
+    border-radius: 2em;
+    background-color: unset;
+    color: white;
+    transition: background-color .3s ease-out;
+}
+
+.input:focus {
+    background-color: rgba(0, 0, 0, .3);
+    outline: none;
+}
+
+.input:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.button {
+    width: 28%;
+    font-size: 0.875em;
+    padding: 0.5625em 0;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, .3);
+    border: 0.1429em solid #FF1640;
+    border-radius: 2em;
+    color: rgba(255, 255, 255, .4);
+    cursor: pointer;
+    transition: background-color .3s ease-out;
+    text-wrap: none;
+    word-break: keep-all;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.button:focus {
+    outline: none;
+}
+
+@media (max-width: 69.5em) {
+    .InputBar {
+        max-width: calc(27.125em + 8.8125em);
+    }
+}
+
+@media (max-width: 45em) {
+    .InputBar {
+        margin-top: .75em;
+    }
+
+    .input {
+        width: 60%;
+        padding: 0.5625em 1em;
+    }
+    .button {
+        width: 30%;
+    }
+}
+
+@media (max-width: 30em) {
+    .input {
+        width: 70%;
+        padding: 0.5625em 1em;
+    }
+    .button {
+        width: 40%;
+    }
+}
+
+@media (max-width: 25em) {
+    .input {
+        width: 100%;
+        padding: 0.5625em 1em;
+    }
+    .button {
+        width: 70%;
+    }
+}

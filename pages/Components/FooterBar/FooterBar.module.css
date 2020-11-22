@@ -1,0 +1,50 @@
+.FooterBar {
+    position: relative;
+    display: block;
+    background-image: url("/6f2bce2d44e55bcbe5a7e06ce64ebf64.jpg");
+    background-position: center;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+}
+
+.redCircle {
+    z-index: 30;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5vw solid #FF1640;
+    border-radius: 50%;
+    top: -4.8vw;
+    left: calc(50vw - 5vw);
+}
+
+.image {
+    width: 100%;
+}
+
+.circle {
+    z-index: 20;
+    background-image: inherit;
+    background-position: center;
+    background-size: 100vw;
+    position: absolute;
+    width: 13vw;
+    height: 6.5vw;
+    border-top-left-radius: 6.5vw;
+    border-top-right-radius: 6.5vw;
+    -moz-border-radius-topleft: 6.5vw;
+    -moz-border-radius-topright: 6.5vw;
+    top: -6.3vw;
+    left: calc(50vw - 6.5vw);
+}
+
+@media (max-width: 35em) {
+    .FooterBar {
+        background-size: cover;
+        background-position: center;
+    }
+    .circle {
+        background-size: 35em;
+        background-position: top;
+    }
+}

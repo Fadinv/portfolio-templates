@@ -1,0 +1,6 @@
+.MiddleBottom {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20vh;
+}

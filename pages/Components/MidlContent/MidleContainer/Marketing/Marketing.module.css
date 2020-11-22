@@ -1,0 +1,80 @@
+.Marketing {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3.8125em;
+}
+
+.Marketing > * {
+}
+
+.title {
+    font-size: 1.5625em;
+    text-transform: uppercase;
+}
+
+.dash {
+    display: flex;
+    margin-left: .35em;
+}
+
+.dash > * {
+    padding: 0;
+    line-height: .1;
+    margin: 0 0 0 0.375em;
+    content: ' ';
+    width: 0.625em;
+    border-top: .075em solid rgba(255, 255, 255, 0.75);
+}
+
+.chat {
+    margin-left: 0.625em;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.button {
+    font-size: 0.875em;
+    font-family: "Segoe UI";
+    margin-left: 0.4062em;
+    line-height: 1.5;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    background-color: #864A23;
+    border-radius: 1em;
+    color: white;
+    padding: .25em 1em;
+    cursor: pointer;
+    transition: background-color .3s ease-out;
+}
+
+.button > * {
+    margin-right: 0.4375em;
+}
+
+.button:hover {
+    transition: background-color .5s ease-out;
+    background-color: #6A3A1B;
+}
+
+@media (max-width: 35em) {
+    .dash1, .dash2, .dash3, .dash4,
+    .dash5, .dash6, .dash7, .dash8 {
+        display: none;
+    }
+}
+
+@media (max-width: 30em) {
+    .dash {
+        background-color: red;
+    }
+    .dash {
+        display: none;
+    }
+}
