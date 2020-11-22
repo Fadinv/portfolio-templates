@@ -1,14 +1,13 @@
 import React, {HTMLAttributes} from 'react';
 import styles from './FooterContent.module.css'
-import Image from 'next/image'
 
-// type FooterContentType = HTMLAttributes<HTMLDivElement> & FooterContentInterface
+type FooterContentType = HTMLAttributes<HTMLDivElement> & FooterContentInterface
 
 interface FooterContentInterface {
 
 }
 
-const FooterContent: React.FC = ({...props}) => {
+const FooterContent: React.FC<FooterContentType> = ({...props}) => {
     return (
         <div {...props} className={styles.FooterContent}>
             <div className={styles.FooterHeader}>
@@ -41,31 +40,9 @@ const FooterContent: React.FC = ({...props}) => {
 
                 <div className={styles.StuckRefRight}>
                     <div className={styles.StuckRefRightSocials}>
-
-                        <div>
-                            <Image
-                                src="/vector.svg"
-                                alt="Picture of the author"
-                                width={'25'}
-                                height={'25'}
-                            />
-                        </div>
-                        <div>
-                            <Image
-                                src="/vector1.svg"
-                                alt="Picture of the author"
-                                width={'25'}
-                                height={'25'}
-                            />
-                        </div>
-                        <div>
-                            <Image
-                                src="/vector2.svg"
-                                alt="Picture of the author"
-                                width={'25'}
-                                height={'25'}
-                            />
-                        </div>
+                        <div><img src={'/Vector.svg'}/></div>
+                        <div><img src={'/Vector1.svg'}/></div>
+                        <div><img src={'/Vector2.svg'}/></div>
                     </div>
                     <span className={styles.StuckRefRightTitle}>Team & Privacy</span>
                     <span className={styles.StuckRefRightItem}>&copy; Thread Groop inc.</span>
