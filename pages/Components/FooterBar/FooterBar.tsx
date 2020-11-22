@@ -12,15 +12,23 @@ const FooterBar: React.FC<FooterBarType> = ({...props}) => {
     return (
         <div {...props} className={styles.FooterBar}>
 
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                marginTop: '-3.65625em',
+            }}>
+                <div className={styles.redCircle}></div>
+            </div>
+
             <FooterContent />
 
-            <div className={styles.circle}>
+            <div className={styles.sliceCircle}>
 
             </div>
 
-            <div className={styles.redCircle}>
+            {/*<div className={styles.redCircle}>*/}
 
-            </div>
+            {/*</div>*/}
         </div>
     );
 };

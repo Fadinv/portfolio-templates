@@ -14,7 +14,11 @@ const FooterContent: React.FC<FooterContentType> = ({...props}) => {
 
                 <div className={styles.LeftBarWrapper}>
 
-                    <div>ALPINE</div>
+                    <div style={{
+                        marginTop: '-0.244444em',
+                        fontSize: '2.8125em',
+                        lineHeight: '1.4'
+                    }}>ALPINE</div>
 
 
                     <div className={styles.StuckRefWrapper}>

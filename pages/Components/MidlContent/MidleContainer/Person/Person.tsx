@@ -61,12 +61,14 @@ const Person = () => {
                                 </div>
                                 <div style={{
                                     color: 'rgba(45, 40, 40, 0.7)',
+                                    whiteSpace: 'nowrap',
                                     fontSize: '1.125em',
                                     fontFamily: "Segoe UI",
                                 }}>just now
                                 </div>
                             </div>
                         </div>
+
                         <div className={styles.PersonDescription}>
                             <div style={{
                                 fontSize: '1.375em',
@@ -109,8 +111,8 @@ const Person = () => {
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',
-                marginTop: '5em',
-                marginBottom: '5em',
+                marginTop: '5.625em',
+                marginBottom: '7.5em',
             }}>
                 <div className={styles.Header}>
                     <div className={styles.HeaderTextWrapper}>
@@ -122,8 +124,9 @@ const Person = () => {
                     </div>
                     <button onClick={hasOpenToggle} className={styles.button} style={{
                         paddingRight: '0',
+                        paddingLeft: '1em',
                     }}>
-                        Undread
+                        Unread
                         <div ref={refToggle} className={styles.toggleButton}>
                             <div className={styles.toggleCircle}></div>
                         </div>
@@ -136,26 +139,30 @@ const Person = () => {
                         <div style={{
                             display: 'flex'
                         }}>
-                            <div>
 
+                            <div>
                                 <div className={styles.Avatar}>
                                     <img src={'/Ellipse 8.png'}/>
                                     <img src={'/Group 3.svg'} className={styles.imageIcon}/>
                                 </div>
                             </div>
+
                             <div style={{
-                                marginLeft: '1em',
-                                marginRight: '1em',
+                                marginLeft: '1.0625em',
+                                marginRight: '1.875em',
                             }}>
                                 <div style={{
                                     color: '#2D2828',
-                                    fontSize: '1.5em',
+                                    fontSize: '1.125em',
                                     fontWeight: "bold",
+                                    fontFamily: "Segoe UI"
                                 }}>Dan
                                 </div>
                                 <div style={{
                                     color: 'rgba(45, 40, 40, 0.7)',
-                                    fontSize: '1.5em',
+                                    fontSize: '1.125em',
+                                    fontFamily: "Segoe UI",
+                                    whiteSpace: 'nowrap',
                                 }}>2 hrs ago
                                 </div>
                             </div>
@@ -163,13 +170,13 @@ const Person = () => {
 
                         <div className={styles.PersonDescription}>
                             <div style={{
-                                fontSize: '1.5em',
+                                fontSize: '1.375em',
                                 fontWeight: "bold",
-                            }}>Thoughts on attendin...
+                            }}>Thoughts on attending...
                             </div>
                             <div style={{
-                                fontSize: '1.2em',
-                                marginTop: '1em',
+                                fontSize: '0.875em',
+                                marginTop: '0.6875em',
                             }}>Our customers have continued to send
                                 in pictures of their finished artwork...
                             </div>

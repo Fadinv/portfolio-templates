@@ -1,41 +1,39 @@
 .FooterBar {
     position: relative;
     display: block;
+    padding: 0;
     background-image: url("/6f2bce2d44e55bcbe5a7e06ce64ebf64.jpg");
-    background-position: center;
-    background-size: 100vw;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .redCircle {
     z-index: 30;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 5vw solid #FF1640;
+    width: 7.3125em;
+    height: 7.3125em;
+    background-color: #FF1640;
+    /*border: 4.375em solid #FF1640;*/
     border-radius: 50%;
-    top: -4.8vw;
-    left: calc(50vw - 5vw);
 }
 
 .image {
     width: 100%;
 }
 
-.circle {
+.sliceCircle {
     z-index: 20;
     background-image: inherit;
     background-position: center;
     background-size: 100vw;
     position: absolute;
-    width: 13vw;
-    height: 6.5vw;
-    border-top-left-radius: 6.5vw;
-    border-top-right-radius: 6.5vw;
-    -moz-border-radius-topleft: 6.5vw;
-    -moz-border-radius-topright: 6.5vw;
-    top: -6.3vw;
-    left: calc(50vw - 6.5vw);
+    width: 9.938em;
+    height: 4.969em;
+    border-top-left-radius: 4.969em;
+    border-top-right-radius: 4.969em;
+    -moz-border-radius-topleft: 4.969em;
+    -moz-border-radius-topright: 4.969em;
+    top: -4.835em;
+    left: calc(50% - 4.969em);
 }
 
 @media (max-width: 35em) {
@@ -43,8 +41,8 @@
         background-size: cover;
         background-position: center;
     }
-    .circle {
-        background-size: 35em;
-        background-position: top;
+    .sliceCircle {
+        background-size: 100vw 30.5em;
+        background-position: center bottom;
     }
 }

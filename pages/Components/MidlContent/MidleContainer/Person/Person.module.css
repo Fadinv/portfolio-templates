@@ -113,24 +113,26 @@
 .toggleButton {
     background: #FF1640;
     width: 3em;
-    height: 1.5em;
+    height: 1.8125em;
     position: relative;
-    border-radius: 1.5em;
-    margin-left: .5em;
+    border-radius: 1.8125em;
+    margin-left: 0.5625em;
     border: none;
     outline: none;
     cursor: pointer;
     transition: background-color .3s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .toggleCircle {
     position: absolute;
-    width: 1.2em;
-    height: 1.2em;
-    border-radius: 1.2em;
+    width: 1.6875em;
+    height: 1.6875em;
+    border-radius: 1.6875em;
     background: white;
-    top: .15em;
-    left: .15em;
+    left: 0.0625em;
     transition: left .3s ease-out;
 }
 
@@ -139,7 +141,7 @@
 }
 
 .isOpenCircle {
-    left: calc(100% - 1.35em);
+    left: calc(100% - 0.0625em - 1.6875em);
 }
 
 @media (max-width: 45em) {

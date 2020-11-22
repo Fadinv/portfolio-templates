@@ -1,51 +1,67 @@
 .FooterContent {
-    font-size: 2em;
-    margin-top: 1vw;
+    font-size: 1rem;
+    margin-top: 0.125em;
     color: white;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 1em 2.5em;
+    padding: 0.6875em 3.6875em 0;
 }
 
 .FooterHeader {
-    margin-top: 2em;
-    flex: 1;
     display: flex;
     justify-content: space-between;
 }
 
 .FooterHello {
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin-top: 6.75em;
+    margin-bottom: 6.9375em;
     flex: 1;
+    font-size: 1.75em;
     display: flex;
     justify-content: center;
+}
+
+.LeftBarWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 58.66%;
+}
+
+.StuckRefWrapper {
+    line-height: 1.4;
+    padding-left: 3.046875em;
+    font-size: 1rem;
+    display: flex;
+    width: 66.66%;
+    justify-content: space-between;
 }
 
 .StuckRef {
     display: flex;
     flex-direction: column;
-    font-size: .5em;
+    font-size: 1.125em;
     font-family: Segoe UI;
     font-style: normal;
     font-weight: bold;
 }
 
+.StuckRef > * + * {
+    margin-top: 0.6875em;
+}
+
 .StuckRefTitle {
-    padding: .5em 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.6875em;
 }
 
 .StuckRefItem {
     font-weight: normal;
-    margin-top: .5em;
 }
 
 .StuckRefRight {
-    padding: 1em 0 0 10vw;
-    font-size: .5em;
-    font-family: "Segoe UI";
+    padding: 1em 0 0;
+    font-size: 1rem;
+    font-family: Segoe UI;
     display: flex;
     flex-direction: column;
 }
@@ -63,7 +79,7 @@
 .StuckRefRightTitle {
     display: flex;
     font-weight: bold;
-    margin-top: 1.5em;
+    margin-top: 0.9375em;
     width: 100%;
     justify-content: flex-end;
 }
@@ -76,26 +92,22 @@
     font-weight: normal;
 }
 
-.LeftBarWrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-}
 
-.StuckRefWrapper {
-    display: flex;
-    width: 66.66%;
-    justify-content: space-between;
-}
-
-@media (max-width: 42.5em) {
+@media (max-width: 47.5em) {
     .LeftBarWrapper {
         flex-direction: column;
-        width: 80%;
+        width: 60%;
+    }
+
+    .FooterHello {
+        margin-top: 3.725em;
+        margin-bottom: 3.45em;
     }
 
     .StuckRefWrapper {
+        margin-top: 0.9375em;
         width: 100%;
+        padding-left: 0;
     }
 
     .FooterContent {
@@ -111,17 +123,24 @@
     .StuckRefWrapper {
         flex-direction: column;
     }
+    .FooterHello {
+        margin-top: 1.6em;
+        margin-bottom: 1.4em;
+    }
+    .StuckRef > * + * {
+        margin-top: 0;
+    }
 
     .StuckRef {
         flex-direction: row;
     }
 
     .FooterContent {
-        padding: .5em .5em;
+
     }
 
     .StuckRef > * + * {
-        margin-left: .5em;
+        margin-left: 1em;
     }
 }
 
@@ -129,13 +148,21 @@
     .FooterHeader {
         display: block;
     }
+    .LeftBarWrapper {
+        width: 100%;
+    }
     .StuckRefRightSocials,
     .StuckRefRightTitle,
     .StuckRefRightItem {
         justify-content: flex-start;
+    }
+    .FooterHello {
+        margin-top: 1em;
+        margin-bottom: .75em;
     }
     .StuckRefRight {
         padding: 0;
         margin-top: 2em;
     }
 }
+
