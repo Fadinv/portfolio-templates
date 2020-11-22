@@ -40,9 +40,9 @@ const FooterContent: React.FC<FooterContentType> = ({...props}) => {
 
                 <div className={styles.StuckRefRight}>
                     <div className={styles.StuckRefRightSocials}>
-                        <div><img src={'/vector.svg'}/></div>
-                        <div><img src={'/vector1.svg'}/></div>
-                        <div><img src={'/vector2.svg'}/></div>
+                        <div><img src={'vector.svg'}/></div>
+                        <div><img src={'vector1.svg'}/></div>
+                        <div><img src={'vector2.svg'}/></div>
                     </div>
                     <span className={styles.StuckRefRightTitle}>Team & Privacy</span>
                     <span className={styles.StuckRefRightItem}>&copy; Thread Groop inc.</span>
