@@ -4,8 +4,15 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    padding: .5em 2em;
+    padding: 1.3125em 4.1875em;
     border-top: .1em solid rgba(255, 255, 255, 0.2)
+}
+
+
+@media (max-width: 75.75em) {
+    .RefBar {
+        padding: 0.65em 2.55em;
+    }
 }
 
 @media (max-width: 45em) {
