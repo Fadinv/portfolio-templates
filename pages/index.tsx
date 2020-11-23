@@ -20,15 +20,11 @@ export default function Home() {
     const isClose = (event) => {
 
         const menu = refMenu.current
-        console.log('123', event.target.parentNode.classList.contains(MenuCSS.li))
-        console.log(!event.target.classList.contains(MenuCSS.button))
-
 
         if (!event.target.classList.contains(MenuCSS.button) && !event.target.parentNode.classList.contains(MenuCSS.li)) {
             menu.classList.remove(MenuCSS.isOpen)
         }
 
-        console.log('from index', refMenu.current)
     }
 
     return (

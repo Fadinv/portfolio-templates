@@ -2,7 +2,7 @@
     position: relative;
     display: block;
     padding: 0;
-    background-image: url("/6f2bce2d44e55bcbe5a7e06ce64ebf64.jpg");
+    background-image: url('/FooterBackground.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }

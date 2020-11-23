@@ -16,12 +16,9 @@ const Menu = React.forwardRef<MenuInterface>(
         ref: RefObject<HTMLUListElement>
     ) => {
 
-        console.log('123', ref)
 
         const openMenu = () => {
             const menu = ref.current
-
-            console.log(ref)
 
             menu.classList.toggle(styles.isOpen)
         }

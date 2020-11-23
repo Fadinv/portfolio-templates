@@ -42,7 +42,7 @@
 
 .button {
     display: flex;
-    background: url('/Rectangle 2.png') center;
+    background: url('/Rectangle 14.png') center;
     background-size: 100vw;
     outline: none;
     cursor: pointer;
@@ -79,8 +79,8 @@
 .PersonBar {
     width: 52.67%;
     display: flex;
-    background: url('/Rectangle 2.png') center;
-    background-size: 100vw;
+    background: url('/Rectangle 13.png') center;
+    background-size: cover;
     padding: 0.875em 1.0625em;
     line-height: 1.5;
 }

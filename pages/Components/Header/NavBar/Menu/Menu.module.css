@@ -75,13 +75,13 @@
         font-size: 1.5em;
         width: 100%;
         text-align: right;
-        border-radius: .2em;
-        background-color: rgba(255, 22, 64, .9);
+        border-radius: .35em;
+        background-color: rgba(255, 22, 64, 1);
         transition: background-color .3s ease-out;
     }
 
     .ul > *:hover {
-        background-color: rgba(255, 22, 64, .75);
+        background-color: rgba(255, 22, 64, .85);
     }
 
     .ul > * + li {
