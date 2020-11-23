@@ -12,8 +12,7 @@ interface NavBarInterface {
 const NavBar: React.FC<NavBarType> = ({children, ...props}) => {
     return (
         <nav className={styles.NavBar}>
-            <Logo/>
-            <Menu/>
+            {children}
         </nav>
     );
 };

@@ -7,12 +7,16 @@
     text-align: center;
 }
 
+.Photos > * {
+}
+
 .photo1 {
     display: block;
 }
 
 .photo1 img {
     max-width: 100%;
+    box-shadow: -0.625em 0.9375em 0.625em rgba(0, 0, 0, .25);
     object-fit: cover;
 }
 
@@ -24,6 +28,7 @@
 }
 
 .photo2 img {
+    box-shadow: -0.625em 0.9375em 0.625em rgba(0, 0, 0, .25);
     max-width: 100%;
     object-fit: cover;
 }
@@ -35,6 +40,7 @@
 }
 
 .photo3 img {
+    box-shadow: -0.625em 0.9375em 0.625em rgba(0, 0, 0, .25);
     max-width: 100%;
     object-fit: cover;
 }

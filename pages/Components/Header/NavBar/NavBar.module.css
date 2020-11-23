@@ -2,9 +2,7 @@
     font-weight: normal;
     font-style: normal;
     display: flex;
-    margin-top: 2.1875em;
-    margin-left: 3.4375em;
-    margin-bottom: 5.875em;
+    margin: 2.1875em 3.4375em 5.875em;
     text-transform: uppercase;
     align-items: center;
     flex-wrap: wrap;
@@ -12,7 +10,6 @@
 
 @media (max-width: 500px) {
     .NavBar {
-        margin-right: 5vw;
         justify-content: space-between;
     }
 }
@@ -26,5 +23,11 @@
 @media (max-width: 45em) {
     .NavBar {
         margin-bottom: 1.4em;
+    }
+}
+
+@media (max-width: 500px) {
+    .NavBar {
+        flex-wrap: nowrap;
     }
 }

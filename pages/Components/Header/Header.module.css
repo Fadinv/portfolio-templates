@@ -23,6 +23,17 @@
 
 .img {
     width: 100%;
-    min-height: 440px;
     object-fit: cover;
+}
+
+@media (max-width: 52em) {
+    .img {
+        min-height: 37.5em;
+    }
+}
+
+@media (max-width: 31.25em) {
+    .img {
+        min-height: 45em;
+    }
 }

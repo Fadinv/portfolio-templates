@@ -5,9 +5,9 @@
 .button {
     font-size: 2.5em;
     display: none;
-    line-height: 1;
+    line-height: 1.5;
     text-transform: uppercase;
-    padding: 0 0.5em;
+    padding: .25em 1em;
     font-weight: bold;
     background-color: rgba(0, 0, 0, .4);
     border-radius: 0.2em;
@@ -24,11 +24,12 @@
 }
 
 .button:focus {
-    box-shadow: 0 0 0 0.1em rgba(15, 240, 240, .3);
+    box-shadow: 0 0 0 0.05em #FF1640;
 }
 
 .ul {
     margin-left: 0;
+    filter: drop-shadow(0px 0.25em 0.25em rgba(0, 0, 0, 0.25));
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -40,17 +41,60 @@
 }
 
 .li {
+    padding: 0;
     font-size: 1rem;
-    text-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, .7);
+    display: block;
+}
+
+.li > a {
+    display: block;
 }
 
 
 @media (max-width: 500px) {
     .ul {
-        display: none;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        height: 0;
+        top: 7em;
+        right: 6vw;
+        overflow: hidden;
+        transition: height .2s ease-out, opacity .2s ease-out;
+        justify-content: flex-start;
+        align-items: flex-end;
+        opacity: .5;
+    }
+
+    .isOpen {
+        height: 200px;
+        opacity: 1;
+    }
+
+    .ul > * {
+        font-size: 1.5em;
+        width: 100%;
+        text-align: right;
+        border-radius: .2em;
+        background-color: rgba(255, 22, 64, .9);
+        transition: background-color .3s ease-out;
+    }
+
+    .ul > *:hover {
+        background-color: rgba(255, 22, 64, .75);
+    }
+
+    .ul > * + li {
+        margin-top: .2em;
+        margin-left: 0;
+    }
+
+    .li > a {
+        padding: .5em 1em;
     }
 
     .button {
         display: flex;
     }
+
 }

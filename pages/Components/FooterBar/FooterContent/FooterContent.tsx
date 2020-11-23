@@ -24,19 +24,19 @@ const FooterContent: React.FC<FooterContentType> = ({...props}) => {
                     <div className={styles.StuckRefWrapper}>
                         <div className={styles.StuckRef}>
                             <span className={styles.StuckRefTitle}>EXPLORE</span>
-                            <span className={styles.StuckRefItem}>Pricing</span>
+                            <a href={'/'} className={styles.StuckRefItem}>Pricing</a>
                             <span className={styles.StuckRefItem}>Mobile</span>
                         </div>
 
                         <div className={styles.StuckRef}>
                             <span className={styles.StuckRefTitle}>RESOURCES</span>
-                            <span className={styles.StuckRefItem}>Blog</span>
+                            <a  href={'/'} className={styles.StuckRefItem}>Blog</a>
                         </div>
 
                         <div className={styles.StuckRef}>
                             <span className={styles.StuckRefTitle}>Company</span>
-                            <span className={styles.StuckRefItem}>About us</span>
-                            <span className={styles.StuckRefItem}>Contact</span>
+                            <a href={'/'} className={styles.StuckRefItem}>About us</a>
+                            <a href={'/'} className={styles.StuckRefItem}>Contact</a>
                         </div>
                     </div>
                 </div>
@@ -44,9 +44,9 @@ const FooterContent: React.FC<FooterContentType> = ({...props}) => {
 
                 <div className={styles.StuckRefRight}>
                     <div className={styles.StuckRefRightSocials}>
-                        <div><img src={'/Vector.svg'}/></div>
-                        <div><img src={'/Vector1.svg'}/></div>
-                        <div><img src={'/Vector2.svg'}/></div>
+                        <a href={'/'}><img src={'/Vector.svg'}/></a>
+                        <a href={'/'}><img src={'/Vector1.svg'}/></a>
+                        <a href={'/'}><img src={'/Vector2.svg'}/></a>
                     </div>
                     <span className={styles.StuckRefRightTitle}>Team & Privacy</span>
                     <span className={styles.StuckRefRightItem}>&copy; Thread Groop inc.</span>

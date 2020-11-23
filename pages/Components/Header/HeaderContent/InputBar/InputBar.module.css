@@ -37,7 +37,7 @@
     font-size: 0.875em;
     padding: 0.5625em 0;
     white-space: nowrap;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, 0);
     border: 0.1429em solid #FF1640;
     border-radius: 2em;
     color: rgba(255, 255, 255, .4);
@@ -48,7 +48,7 @@
 }
 
 .button:hover {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .3);
 }
 
 .button:focus {
