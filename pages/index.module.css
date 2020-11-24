@@ -1,0 +1,50 @@
+.Index {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 4em;
+    font-family: -apple-system;
+    font-size: 1.2rem;
+    text-align: center;
+    background: linear-gradient(90deg, #f5f5f5 0%, #f2f2f2);
+    min-height: 100vh;
+    color: #222F33;
+}
+
+.Me {
+
+}
+
+.Hello {
+
+}
+
+.MeText {
+
+}
+
+.RefStart {
+    border: #222F33 solid .1em;
+    padding: .5em 1em;
+    border-radius: .2em;
+    transition: background-color .3s ease-out;
+}
+
+.RefStart:hover {
+    background-color: rgba(175,200,200,0.55);
+}
+
+.PortfolioStuck {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.PortfolioStuckPhoto {
+    display: flex;
+}
+
+.PortfolioStuckPhoto > * + * {
+margin-left: 4em;
+}

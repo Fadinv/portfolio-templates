@@ -1,0 +1,25 @@
+.TemplatesItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.PhotoBox {
+    border-radius: .2em;
+    box-shadow: -.05em .05em .2em #222F33;
+    cursor: pointer;
+    transition: opacity .3s ease-out;
+}
+
+.PhotoBox:hover {
+    opacity: .85;
+}
+
+.Img {
+    z-index: -1;
+    display: block;
+    border-radius: .2em;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+

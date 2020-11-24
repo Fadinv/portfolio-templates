@@ -1,0 +1,98 @@
+.Top {
+    display: flex;
+}
+
+.WhiteBoxText {
+    z-index: 50;
+    width: 61.6%;
+    background-color: white;
+    margin-top: -3.7em;
+    padding: 6.2em 11.6em 5.7em 10em;
+}
+
+.WhiteBoxTitle {
+    font-size: 3em;
+    font-family: 'Merriweather', -apple-system, Roboto;
+    line-height: 1.2667;
+    margin: 0;
+    padding: 0;
+}
+
+.WhiteBoxDescription {
+    line-height: 1.8571;
+    font-size: 1.4em;
+    color: #646D70;
+    padding: 0;
+    margin: 0.9286em 0 0;
+}
+
+.WhiteBoxButton {
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.6667;
+    padding: 0.8333em 1.2917em 0.8333em 1.2083em;
+    margin-top: 1em;
+    color: #606B74;
+    background-color: white;
+    border: 0.0833em solid #646D70;
+    border-radius: 0.3333em;
+    cursor: pointer;
+    transition: background-color .3s ease-out;
+}
+.WhiteBoxButton:hover {
+    background-color: rgba(15, 15, 15, .05);
+}
+.WhiteBoxButton:focus {
+    outline: none;
+}
+
+.EmptyWhiteBox {
+    position: relative;
+    z-index: 200;
+    display: flex;
+    width: 38.4%;
+}
+
+.BackgroundWhite {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22.3em;
+    background-color: white;
+    width: 100%;
+}
+
+
+
+@media (max-width: 48.4375em) {
+    .WhiteBoxText {
+        margin-top: -3.7em;
+        padding: 3.1em 5.8em 2.85em 5em;
+    }
+}
+
+@media (max-width: 41.25em) {
+    .WhiteBoxText {
+        width: 50%;
+    }
+    .EmptyWhiteBox {
+        width: 50%;
+    }
+}
+
+@media (max-width: 32.5em) {
+    .Top {
+        display: flex;
+        flex-direction: column;
+    }
+    .EmptyWhiteBox {
+        height: auto;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .WhiteBoxText {
+        margin: 0;
+        width: unset;
+    }
+}
