@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './index.module.css'
 import TemplatesItem from "./Components/Templates/TemplatesItem/TemplatesItem";
+import Templates from "./Components/Templates/Templates";
 
 export default function Home() {
 
@@ -21,10 +22,10 @@ export default function Home() {
             <div className={styles.PortfolioStuck}>
                 <h2>Шаблоны верстки</h2>
 
-                <div className={styles.PortfolioStuckPhoto}>
+                <Templates>
                     <TemplatesItem src={'/land1.png'} land={1}/>
                     <TemplatesItem src={'/land2.png'} land={2}/>
-                </div>
+                </Templates>
 
             </div>
         </div>

@@ -40,11 +40,3 @@
     margin-top: 1em;
     margin-bottom: 1em;
 }
-
-.PortfolioStuckPhoto {
-    display: flex;
-}
-
-.PortfolioStuckPhoto > * + * {
-margin-left: 4em;
-}

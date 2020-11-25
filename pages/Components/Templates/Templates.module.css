@@ -1,3 +1,7 @@
 .Templates {
+    display: flex;
+}
 
+.Templates > * + * {
+    margin-left: 4em;
 }

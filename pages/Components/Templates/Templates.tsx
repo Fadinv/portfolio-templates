@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from './Templates.module.css'
 
-const Templates = () => {
+const Templates = ({children}) => {
+
     return (
         <div className={styles.Templates}>
-
-            <Templates />
-
+            {children}
         </div>
     );
 };
