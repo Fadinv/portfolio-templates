@@ -3,7 +3,7 @@ import styles from './ProductContainer.module.css'
 import ProductContainerItemsWrapper from "./ProductContainerItemsWrapper/ProductContainerItemsWrapper";
 
 interface ProductContainerProps {
-    children: React.ReactElement[]
+    children: React.ReactNode[]
     rows: 1 | 2
     columns: 2 | 3
 }
@@ -25,6 +25,7 @@ const getGridTemplateColumnOrRow = (num) => {
 const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...props}) => {
 
 
+
     const numInsideGrid = rows * columns
 
     const containerRef = useRef<HTMLDivElement>()
@@ -36,11 +37,7 @@ const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...pr
     const body = []
     let i = -1
 
-    if (!props.children.hasOwnProperty('length')) {
-        return <div className={styles.ProductContainer}>
-            {props.children}
-        </div>
-    }
+    try {
 
     for (let j = 0; j < props.children.length; j++) {
         if (j % numInsideGrid === 0) {
@@ -49,13 +46,15 @@ const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...pr
         }
         body[i].push(props.children[j])
     }
-
+    } catch (e) {
+        console.log(e)
+    }
     const movePosition = (event) => {
         const moveOn = event.target.dataset.set
         const elem = containerRef.current
 
         const width = 84
-        let scrollWidth = state.scrollWidth
+        let scrollWidth
 
         let div = document.createElement('div');
         div.style.overflowY = 'scroll';
