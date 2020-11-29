@@ -4,7 +4,7 @@ import Link from "next/link";
 
 interface TemplatesItemProps {
     src: string
-    land: 1 | 2
+    land: 1 | 2 | 3
 }
 
 const TemplatesItem: React.FC<TemplatesItemProps> = (props) => {

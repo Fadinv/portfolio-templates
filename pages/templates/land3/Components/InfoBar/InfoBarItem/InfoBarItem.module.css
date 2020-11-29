@@ -1,0 +1,27 @@
+.InfoBarItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.InfoBarItemImg {}
+
+.InfoBarItemTitle {
+    font-family: Nunito;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1.1666;
+    color: #232C38;
+}
+
+.InfoBarItemDescription {
+    font-family: Nunito;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.375;
+    color: #151D28;
+}
+
+@media (max-width: 45.5em) {
+
+}

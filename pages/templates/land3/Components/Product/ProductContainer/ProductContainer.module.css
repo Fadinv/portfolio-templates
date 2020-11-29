@@ -1,0 +1,79 @@
+.ProductContainer {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    padding: calc(72*100vw/1400) calc(123*100vw/1400) calc(127*100vw/1400) calc(130*100vw/1400);
+}
+
+.Active {
+    opacity: 1;
+}
+
+.ProductContainerItems {
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: left .3s ease-out, right .3s ease-out;
+}
+
+.ProductContainerItems > * + * {
+    margin-left: calc(29*100vw/1400);
+}
+
+.Button {
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+    width: 3em;
+    height: 3em;
+    border: none;
+    border-radius: 50%;
+    background-color: #C7A17A;
+    margin-left: 0;
+    position: absolute;
+    transition: box-shadow .3s ease-out;
+}
+
+.ButtonLeft {
+    top: calc(50% - 55*100vw/1400);
+    left: calc(130*100vw/1400 - 3em);
+}
+
+.ButtonRight {
+    top: calc(50% - 55*100vw/1400);
+    right: calc(123*100vw/1400 - 3em);
+}
+
+.ButtonRight:focus,
+.ButtonLeft:focus {
+    outline: none;
+}
+.ButtonRight:hover,
+.ButtonLeft:hover {
+    box-shadow: #6A3A1B 0 0 .5em;
+}
+
+.ButtonRight:active,
+.ButtonLeft:active {
+    box-shadow: inset #EDF0F5 0 0 1.5em;
+}
+
+.ImageButtonLeft {
+    transform: rotate(180deg);
+    width: 1.5em;
+}
+.ImageButtonRight {
+    width: 1.5em;
+}
+
+@media (max-width: 32em) {
+    .ButtonLeft {
+        top: calc(50% - 55*100vw/1400);
+        left: calc(130*100vw/1400 - 1.5em);
+    }
+
+    .ButtonRight {
+        top: calc(50% - 55*100vw/1400);
+        right: calc(123*100vw/1400 - 1.5em);
+    }
+}

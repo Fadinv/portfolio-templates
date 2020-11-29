@@ -25,6 +25,7 @@ export default function Home() {
                 <Templates>
                     <TemplatesItem src={'/land1.png'} land={1}/>
                     <TemplatesItem src={'/land2.png'} land={2}/>
+                    <TemplatesItem src={'/land3.png'} land={3}/>
                 </Templates>
 
             </div>

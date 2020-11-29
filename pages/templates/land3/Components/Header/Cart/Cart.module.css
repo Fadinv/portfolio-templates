@@ -1,0 +1,39 @@
+.Cart {
+    position: relative;
+}
+
+.NumberProduct {
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    color: #F9FBFF;
+    background-color: #C7A17A;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Number {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 300;
+    font-weight: 300;
+    font-size: 0.875em;
+}
+
+@media (max-width: 41.25em) {
+    .Cart {
+        position: absolute;
+        left: 92%;
+    }
+}
+
+@media (max-width: 35.5em) {
+    .Cart {
+        left: 87.5%;
+    }
+}

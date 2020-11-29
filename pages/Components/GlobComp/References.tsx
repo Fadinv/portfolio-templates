@@ -21,7 +21,7 @@ const References = () => {
                 </div>}
 
 
-            {counter === 2 ? null :
+            {counter === 3 ? null :
                 <div className={styles.References + ' ' + styles.Right}>
                     <Link href={`/templates/land${counter + 1}`}>
                         <a className={styles.Ref}>next &#187;</a>
