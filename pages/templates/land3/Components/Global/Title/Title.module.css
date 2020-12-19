@@ -1,7 +1,10 @@
 .Title {
     position: relative;
+    display: flex;
+    flex-direction: column;
     z-index: 10;
     text-align: center;
+    margin: 0 auto;
 }
 
 .TitleTop {
@@ -25,4 +28,16 @@
     font-size: 1.875em;
     line-height: 1.1333;
     color: #415167;
+}
+
+@media (max-width: 35em) {
+    .Reverse {
+        background-color: #415167;
+        color: #f9fbff;
+        padding-bottom: 2em;
+    }
+
+    .Reverse > * {
+        color: #f9fbff;
+    }
 }

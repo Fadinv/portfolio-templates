@@ -28,6 +28,7 @@ const Product: React.FC<ProductProps> = ({variant, text, description, ...props})
                 paddingTop={`calc(90*100vw/1400)`}
                 text={text}
                 description={description}
+                reverseBackground
             />
 
             <>

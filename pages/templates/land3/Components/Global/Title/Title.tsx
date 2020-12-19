@@ -6,12 +6,19 @@ interface TitleProps {
     text: string
     description: string
     paddingTop?: CSS.Property.PaddingTop
+    reverseBackground?: boolean
 }
 
 const Title: React.FC<TitleProps> = (props) => {
+
+    const titleClassesArray = [styles.Title]
+
+    if (props.reverseBackground) titleClassesArray.push(styles.Reverse)
+
     return (
-        <div className={styles.Title} style={{
-            paddingTop: props.paddingTop
+        <div className={titleClassesArray.join(' ')} style={{
+            paddingTop: props.paddingTop,
+            // backgroundColor: props.backgroundColor || 'unset'
         }}>
             <span className={styles.TitleTop}>{props.description}</span>
             <h2 className={styles.TitleBottom}>{props.text}</h2>
