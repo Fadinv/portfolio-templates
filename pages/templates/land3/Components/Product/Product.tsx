@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import styles from './Product.module.css'
-import Title from "../Global/Title/Title";
+import Title from '../Global/Title/Title'
 
 interface ProductProps {
     variant: 'left' | 'right'
@@ -36,7 +36,7 @@ const Product: React.FC<ProductProps> = ({variant, text, description, ...props})
             </>
 
         </div>
-    );
-};
+    )
+}
 
-export default Product;
+export default Product

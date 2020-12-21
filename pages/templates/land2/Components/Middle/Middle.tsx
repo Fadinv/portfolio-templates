@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import styles from './Middle.module.css'
-import Top from "./Top/Top";
-import Center from "./Center/Center";
-import Bottom from "./Bottom/Bottom";
+import Top from './Top/Top'
+import Center from './Center/Center'
+import Bottom from './Bottom/Bottom'
 
 const Middle = () => {
     return (
@@ -15,7 +15,7 @@ const Middle = () => {
             <Bottom/>
 
         </div>
-    );
-};
+    )
+}
 
-export default Middle;
+export default Middle

@@ -1,4 +1,5 @@
 .TemplatesItem {
+    margin: 1em;
     max-width: 600px;
     display: flex;
     justify-content: space-between;
@@ -6,6 +7,7 @@
 
 .PhotoBox {
     border-radius: .2em;
+    width: auto;
     box-shadow: -.05em .05em .2em #222F33;
     cursor: pointer;
     transition: opacity .3s ease-out;
@@ -18,8 +20,9 @@
 .Img {
     z-index: -1;
     display: block;
+    max-width: 600px;
+    width: 100%;
     border-radius: .2em;
-    max-width: 100%;
     object-fit: cover;
 }
 

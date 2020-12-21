@@ -40,6 +40,8 @@ const Person = () => {
                     <div className={styles.PersonBar}>
                         <div style={{
                             display: 'flex',
+                            width: '100%',
+                            height: '100%',
                         }}>
                             <div>
                                 <div className={styles.Avatar}>
@@ -137,7 +139,9 @@ const Person = () => {
 
                     <div className={styles.PersonBar}>
                         <div style={{
-                            display: 'flex'
+                            display: 'flex',
+                            width: '100%',
+                            height: 'auto',
                         }}>
 
                             <div>

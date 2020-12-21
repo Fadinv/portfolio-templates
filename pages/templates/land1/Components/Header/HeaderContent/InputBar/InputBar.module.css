@@ -18,7 +18,7 @@
     padding: 0.5625em 2.1875em;
     border: 0.1429em solid rgba(255, 255, 255, 0.4);
     border-radius: 2em;
-    background-color: unset;
+    background-color: rgba(0, 0, 0, .0);
     color: white;
     transition: background-color .3s ease-out;
 }

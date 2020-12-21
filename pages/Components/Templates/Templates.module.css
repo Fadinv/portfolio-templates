@@ -1,6 +1,14 @@
+/* autoprefixer grid: autoplace */
+
 .Templates {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    /*display: grid;*/
+    /*grid-template-columns: 1fr 1fr;*/
+    /*grid-template-rows: 1fr 1fr;*/
+    /*grid-gap: 4em;*/
 }

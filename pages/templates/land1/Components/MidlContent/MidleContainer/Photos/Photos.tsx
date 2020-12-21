@@ -1,5 +1,5 @@
-import React, {HTMLAttributes} from 'react';
-import styles from './Photos.module.css';
+import React, {HTMLAttributes} from 'react'
+import styles from './Photos.module.css'
 
 type PhotosType = HTMLAttributes<HTMLDivElement> & PhotosInterface
 
@@ -12,19 +12,19 @@ const Photos: React.FC<PhotosType> = ({...props}) => {
         <div {...props} className={styles.Photos}>
 
             <div className={styles.photo1}>
-                <img src={'/land1/photo1.png'} />
+                <img alt={''} src={'/land1/photo1.png'}/>
             </div>
 
             <div className={styles.photo2}>
-                <img src={'/land1/photo2.png'} />
+                <img alt={''} src={'/land1/photo2.png'}/>
             </div>
 
             <div className={styles.photo3}>
-                <img src={'/land1/photo3.png'} />
+                <img alt={''} src={'/land1/photo3.png'}/>
             </div>
 
         </div>
-    );
-};
+    )
+}
 
-export default Photos;
+export default Photos

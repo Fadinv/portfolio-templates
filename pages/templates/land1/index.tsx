@@ -33,7 +33,9 @@ const Index = () => {
                 </NavBar>
                 <HeaderContent/>
             </Header>
+
             <MidlContent/>
+
             <FooterBar/>
 
             <References/>

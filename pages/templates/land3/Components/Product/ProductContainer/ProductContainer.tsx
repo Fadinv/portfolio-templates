@@ -1,6 +1,6 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState} from 'react'
 import styles from './ProductContainer.module.css'
-import ProductContainerItemsWrapper from "./ProductContainerItemsWrapper/ProductContainerItemsWrapper";
+import ProductContainerItemsWrapper from './ProductContainerItemsWrapper/ProductContainerItemsWrapper'
 
 interface ProductContainerProps {
     children: React.ReactNode[]
@@ -23,9 +23,6 @@ const getGridTemplateColumnOrRow = (num) => {
 }
 
 const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...props}) => {
-
-
-
     const numInsideGrid = rows * columns
 
     const containerRef = useRef<HTMLDivElement>()
@@ -39,13 +36,13 @@ const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...pr
 
     try {
 
-    for (let j = 0; j < props.children.length; j++) {
-        if (j % numInsideGrid === 0) {
-            i++
-            body.push([])
+        for (let j = 0; j < props.children.length; j++) {
+            if (j % numInsideGrid === 0) {
+                i++
+                body.push([])
+            }
+            body[i].push(props.children[j])
         }
-        body[i].push(props.children[j])
-    }
     } catch (e) {
         console.log(e)
     }
@@ -56,14 +53,14 @@ const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...pr
         const width = 84
         let scrollWidth
 
-        let div = document.createElement('div');
-        div.style.overflowY = 'scroll';
-        div.style.width = '50px';
-        div.style.height = '50px';
+        var div = document.createElement('div')
+        div.style.overflowY = 'scroll'
+        div.style.width = '50px'
+        div.style.height = '50px'
 
-        document.body.append(div);
-        scrollWidth = div.offsetWidth - div.clientWidth;
-        div.remove();
+        document.body.insertBefore(div, document.body.childNodes[0])
+        scrollWidth = div.offsetWidth - div.clientWidth
+        document.body.removeChild(div)
 
         setState({
             position: state.position,
@@ -117,7 +114,7 @@ const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...pr
                                                                        style={{
                                                                            ['--var-rows' as string]: getGridTemplateColumnOrRow(rows),
                                                                            ['--var-columns' as string]: getGridTemplateColumnOrRow(columns),
-                                                                           opacity: key === 0 ? '1' : '.5'
+                                                                           opacity: key === 0 ? '1' : '.5',
                                                                        }} key={key}>
                     {item}
                 </ProductContainerItemsWrapper>)}
@@ -129,7 +126,7 @@ const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...pr
                 <img data-set={'right'} className={styles.ImageButtonRight} src={'/land3/Shape.svg'}/>
             </button>
         </div>
-    );
-};
+    )
+}
 
-export default ProductContainer;
+export default ProductContainer

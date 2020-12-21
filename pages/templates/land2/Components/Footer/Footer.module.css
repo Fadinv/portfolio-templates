@@ -1,12 +1,14 @@
 .Footer {
+    width: 100%;
     display: flex;
+    position: relative;
     padding: 3.3em 5em;
     justify-content: space-between;
     align-items: center;
 }
 
 .RefEmail {
-    font-family: Rubik, -apple-system, Roboto;
+    font-family: Rubik, -apple-system, Roboto, serif;
     font-style: normal;
     font-weight: 500;
     font-size: 1.2em;
@@ -16,7 +18,10 @@
 }
 
 .Image {
-
+    position: absolute;
+    display: block;
+    left: calc(50% - 67px);
+    top: calc(50% - 12px);
 }
 
 .InfoBox {
@@ -27,7 +32,7 @@
 .InfoBox > * {
     font-size: 1.2em;
     line-height: 1.1667;
-    font-family: Rubik, -apple-system, Roboto;
+    font-family: Rubik, -apple-system, Roboto, serif;
     color: #fff;
     font-weight: 500;
     opacity: 0.6;
@@ -39,30 +44,13 @@
 
 @media (max-width: 27.5em) {
     .Footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-gap: 5vw 0;
-    }
-    .RefEmail {
-        grid-column: 1/3;
-        grid-row: 2/3;
+        padding-top: 10em;
     }
     .Image {
-        grid-column: 2/4;
-        grid-row: 1/2;
-    }
-    .InfoBox {
-        grid-column: 3/5;
-        grid-row: 2/3;
-    }
-    .InfoBox > * + * {
-        margin-left: .2em;
+        top: calc(35% - 12px);
     }
 }
 
 @media (max-width: 20em) {
-    .Image {
-        grid-column: 1/4;
-    }
+
 }

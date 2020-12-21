@@ -18,7 +18,6 @@ const Title: React.FC<TitleProps> = (props) => {
     return (
         <div className={titleClassesArray.join(' ')} style={{
             paddingTop: props.paddingTop,
-            // backgroundColor: props.backgroundColor || 'unset'
         }}>
             <span className={styles.TitleTop}>{props.description}</span>
             <h2 className={styles.TitleBottom}>{props.text}</h2>

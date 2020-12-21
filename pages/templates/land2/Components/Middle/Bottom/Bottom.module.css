@@ -1,3 +1,5 @@
+/* autoprefixer grid: autoplace */
+
 .Bottom {
     background-color: white;
     display: flex;
@@ -9,19 +11,23 @@
 
 .ImageBox {
     display: flex;
-    width: 100%;
+    max-width: 100%;
+    max-height: content-box;
     box-shadow: .1em .1em .5em #151515;
     border-radius: .2em;
 }
 
 .Image {
+    max-height: calc(100vw - 12em);
     border-radius: .2em;
     display: block;
+    max-width: 100%;
     width: 100%;
     object-fit: cover;
 }
 
 .TextGrid {
+    width: 100%;
     margin-left: 7.5em;
     margin-top: .4em;
     margin-bottom: .4em;
@@ -56,7 +62,7 @@
         max-width: 100%;
     }
     .ImageBox {
-    justify-content: center;
+        justify-content: center;
     }
 }
 

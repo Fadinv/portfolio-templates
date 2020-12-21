@@ -8,8 +8,8 @@
     display: block;
     margin-top: -7.6em;
     margin-left: -4.1em;
-    width: var(--var-width);
-    height: var(--var-height);
+    width: 36.6em;
+    height: 32.5em;
     box-shadow: .1em .1em .5em #151515;
 }
 
@@ -83,18 +83,3 @@
         margin-left: 0;
     }
 }
-
-
-/*@media (max-width: 25em) {*/
-/*    .ImageStuck {*/
-/*        height: var(--var-height);*/
-/*        z-index: 100;*/
-/*        width: var(--var-width);*/
-
-/*    }*/
-
-/*    .ImageItem{*/
-/*        height: var(--var-height);*/
-/*        width: var(--var-width);*/
-/*    }*/
-/*}*/

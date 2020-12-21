@@ -20,7 +20,7 @@ export default function Home() {
             </div>
 
             <div className={styles.PortfolioStuck}>
-                <h2>Шаблоны верстки</h2>
+                <h2 className={styles.Text}>Шаблоны верстки</h2>
 
                 <Templates>
                     <TemplatesItem src={'/land1.png'} land={1}/>

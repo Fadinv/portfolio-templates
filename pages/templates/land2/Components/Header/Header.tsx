@@ -1,6 +1,5 @@
-import React, {RefObject} from 'react';
+import React, {RefObject} from 'react'
 import styles from './Header.module.css'
-
 
 
 const Header = React.forwardRef((props, ref: RefObject<HTMLUListElement>) => {
@@ -26,7 +25,8 @@ const Header = React.forwardRef((props, ref: RefObject<HTMLUListElement>) => {
                         <button onClick={onOpen} className={styles.MenuButton}>Menu</button>
 
                         <ul ref={ref} className={styles.MenuList}>
-                            <li><a className={styles.Ref} onClick={disReference} href="/templates/land2">Modelien</a></li>
+                            <li><a className={styles.Ref} onClick={disReference} href="/templates/land2">Modelien</a>
+                            </li>
                             <li><a className={styles.Ref} onClick={disReference} href="/templates/land2">Kopen</a></li>
                             <li><a className={styles.Ref} onClick={disReference} href="/templates/land2">Huren</a></li>
                             <li><a className={styles.Ref} onClick={disReference} href="/templates/land2">Nieuws</a></li>
@@ -61,4 +61,4 @@ const Header = React.forwardRef((props, ref: RefObject<HTMLUListElement>) => {
     )
 })
 
-export default Header;
+export default Header

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styles from './InfoBarItem.module.css'
 
 interface InfoBarItemProps {
@@ -14,7 +14,7 @@ const InfoBarItem: React.FC<InfoBarItemProps> = (props) => {
             <h3 className={styles.InfoBarItemTitle}>{props.title}</h3>
             <span className={styles.InfoBarItemDescription}>{props.description}</span>
         </div>
-    );
-};
+    )
+}
 
-export default InfoBarItem;
+export default InfoBarItem

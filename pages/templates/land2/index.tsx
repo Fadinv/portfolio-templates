@@ -1,10 +1,10 @@
-import React, {RefObject} from 'react';
+import React, {RefObject} from 'react'
 import styles from './index.module.css'
-import Header from "./Components/Header/Header";
-import Middle from "./Components/Middle/Middle";
-import Footer from "./Components/Footer/Footer";
+import Header from './Components/Header/Header'
+import Middle from './Components/Middle/Middle'
+import Footer from './Components/Footer/Footer'
 import HeaderCSS from './Components/Header/Header.module.css'
-import References from "../../Components/GlobComp/References";
+import References from '../../Components/GlobComp/References'
 
 const Land2 = () => {
 
@@ -32,9 +32,9 @@ const Land2 = () => {
                 <Footer/>
 
             </div>
-            <References />
+            <References/>
         </div>
-    );
-};
+    )
+}
 
-export default Land2;
+export default Land2

@@ -1,24 +1,23 @@
-import React, {HTMLAttributes} from 'react';
+import React, {HTMLAttributes} from 'react'
 import styles from './Header.module.css'
-import NavBar from "./NavBar/NavBar";
-import HeaderContent from "./HeaderContent/HeaderContent";
 
 type HeaderType = HTMLAttributes<HTMLDivElement> & HeaderInterface
+
 interface HeaderInterface {
     children: React.ReactNode
 }
 
-const Header: React.FC<HeaderType> = ({children, ...props}) => {
+const Header: React.FC<HeaderType> = ({children}) => {
     return (
         <div className={styles.Header}>
             <div className={styles.secondLayer}>
                 {children}
             </div>
             <div className={styles.wrapperImg}>
-                <img className={styles.img} src={'/land1/Rectangle1.png'}></img>
+                <img className={styles.img} src={'/land1/Rectangle1.png'} alt={''}/>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header

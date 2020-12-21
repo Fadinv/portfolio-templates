@@ -1,6 +1,7 @@
 .MidlContent {
     z-index: 10;
     display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
     background-image: url("/land1/MiddleBackground.png");

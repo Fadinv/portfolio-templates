@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import styles from './ProductItem.module.css'
 
 type ProductItemProps = {
@@ -25,8 +25,8 @@ const ProductItem: React.FC<ProductItemProps> = ({variant, src, price, oldPrice,
                 <img className={styles.Image} src={`/land3/${src}`}/>
             </div>
 
-            <div className={styles.ProductMenu} >
-                <div >
+            <div className={styles.ProductMenu}>
+                <div>
                     <div className={styles.ProductMenuPriceBar}>
                         <p className={styles.ProductMenuPrice}>{price}</p>
                         {oldPrice ? <p className={styles.ProductMenuLineThrough}>{oldPrice}</p> : null}
@@ -43,7 +43,7 @@ const ProductItem: React.FC<ProductItemProps> = ({variant, src, price, oldPrice,
             </div>
 
         </div>
-    );
-};
+    )
+}
 
-export default ProductItem;
+export default ProductItem

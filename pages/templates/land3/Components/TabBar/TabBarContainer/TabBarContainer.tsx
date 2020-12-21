@@ -1,12 +1,12 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState} from 'react'
 import styles from './TabBarContainer.module.css'
-import TabBarMinimalDescription from "../TabBarMinimalDescription/TabBarMinimalDescription";
-import ButtonStuck from "../../Global/ButtonStuck/ButtonStuck";
+import TabBarMinimalDescription from '../TabBarMinimalDescription/TabBarMinimalDescription'
+import ButtonStuck from '../../Global/ButtonStuck/ButtonStuck'
 
 const TabBarContainer = () => {
 
     const [state, setState] = useState({
-        position: 0
+        position: 0,
     })
 
     const buttonStuckRef = useRef<HTMLDivElement>()
@@ -23,7 +23,7 @@ const TabBarContainer = () => {
         target.classList.toggle(styles.active)
 
         setState({
-            position: target.dataset.set
+            position: target.dataset.set,
         })
     }
 
@@ -47,12 +47,13 @@ const TabBarContainer = () => {
 
                 <div className={styles.MinimalStuck}>
 
-                    <TabBarMinimalDescription src={'/land3/coffee-beans.svg'} title={'Loại hạt'} text={'Fine Robusta Blend'} />
-                    <TabBarMinimalDescription src={'/land3/mountain (1).svg'} title={'Độ cao'} text={'700 - 800m'} />
+                    <TabBarMinimalDescription src={'/land3/coffee-beans.svg'} title={'Loại hạt'}
+                                              text={'Fine Robusta Blend'}/>
+                    <TabBarMinimalDescription src={'/land3/mountain (1).svg'} title={'Độ cao'} text={'700 - 800m'}/>
 
                 </div>
 
-                <ButtonStuck />
+                <ButtonStuck/>
             </div>
 
             <div ref={buttonStuckRef} className={styles.ButtonStuck}>
@@ -62,7 +63,7 @@ const TabBarContainer = () => {
             </div>
 
         </div>
-    );
-};
+    )
+}
 
-export default TabBarContainer;
+export default TabBarContainer

@@ -1,5 +1,5 @@
-import React from 'react';
-import ImageStuck from "./ImageStuck/ImageStuck";
+import React from 'react'
+import ImageStuck from './ImageStuck/ImageStuck'
 import styles from './Top.module.css'
 
 const Top = () => {
@@ -21,7 +21,7 @@ const Top = () => {
             </div>
 
             <div className={styles.EmptyWhiteBox}>
-                <ImageStuck />
+                <ImageStuck/>
 
                 <div className={styles.BackgroundWhite}>
 
@@ -30,7 +30,7 @@ const Top = () => {
             </div>
 
         </div>
-    );
-};
+    )
+}
 
-export default Top;
+export default Top

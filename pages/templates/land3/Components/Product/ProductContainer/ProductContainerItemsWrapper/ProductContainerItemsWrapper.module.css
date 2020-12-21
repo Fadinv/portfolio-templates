@@ -1,10 +1,14 @@
+/* autoprefixer grid: autoplace */
+
 .ProductContainerItemsWrapper {
     --var-rows: 1fr 1fr;
     --var-columns: 1fr 1fr;
     min-width: 100%;
     opacity: .5;
     display: grid;
+    grid-template-rows: 1fr 1fr;
     grid-template-rows: var(--var-rows);
+    grid-template-columns: 1fr 1fr;
     grid-template-columns: var(--var-columns);
     grid-gap: 2em calc(29*100vw/1400);
     transition: opacity .3s ease-in-out;
