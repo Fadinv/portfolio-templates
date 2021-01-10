@@ -34,8 +34,8 @@ const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...pr
     const body = []
     let i = -1
 
-    if (!props.children) return
-    if (!props.children.length) return
+    if (!props.children) return (<div></div>)
+    if (!props.children.length) return (<div></div>)
 
     try {
 
@@ -123,10 +123,10 @@ const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...pr
                 </ProductContainerItemsWrapper>)}
             </div>
             <button onClick={movePosition} data-set={'left'} className={styles.Button + ' ' + styles.ButtonLeft}>
-                <img data-set={'left'} className={styles.ImageButtonLeft} src={'/land3/Shape.svg'}/>
+                <img alt={''} data-set={'left'} className={styles.ImageButtonLeft} src={'/land3/Shape.svg'}/>
             </button>
             <button onClick={movePosition} data-set={'right'} className={styles.Button + ' ' + styles.ButtonRight}>
-                <img data-set={'right'} className={styles.ImageButtonRight} src={'/land3/Shape.svg'}/>
+                <img alt={''} data-set={'right'} className={styles.ImageButtonRight} src={'/land3/Shape.svg'}/>
             </button>
         </div>
     )
