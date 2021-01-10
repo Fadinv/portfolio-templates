@@ -19,6 +19,8 @@ interface DescriptionProps {
 const Description: React.FC<DescriptionProps> = ({descriptionType}) => {
 
     const props = myDescription[descriptionType]
+    if (!props) return
+    if (!props.src) return
 
     return (
         <div className={styles.Description}>

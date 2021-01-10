@@ -34,6 +34,9 @@ const ProductContainer: React.FC<ProductContainerProps> = ({rows, columns, ...pr
     const body = []
     let i = -1
 
+    if (!props.children) return
+    if (!props.children.length) return
+
     try {
 
         for (let j = 0; j < props.children.length; j++) {
