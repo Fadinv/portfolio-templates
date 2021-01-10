@@ -11,8 +11,6 @@ const Person = () => {
         toggle.classList.toggle(styles.isOpenButton)
 
         toggle.firstElementChild.classList.toggle(styles.isOpenCircle)
-
-        console.log(toggle.firstElementChild)
     }
 
     return (

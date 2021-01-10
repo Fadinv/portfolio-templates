@@ -12,14 +12,11 @@ const TabBarContainer = () => {
     const buttonStuckRef = useRef<HTMLDivElement>()
 
     const toggleButton = ({target}) => {
-        console.log(target.dataset.set)
         if (target.dataset.set === state.position) {
-            console.log('Вошли')
             return
         }
         const lastActiveItem = buttonStuckRef.current.children[state.position]
         lastActiveItem.classList.toggle(styles.active)
-        console.log(lastActiveItem)
         target.classList.toggle(styles.active)
 
         setState({
