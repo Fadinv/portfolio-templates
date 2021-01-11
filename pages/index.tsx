@@ -22,7 +22,7 @@ export default function Home() {
                 <span className={styles.name}>Владимир Фадин</span>
                 <div className={styles.InfoBar}>
                     <div>
-                        <span className={styles.Social}>• Соц. сети
+                        <span className={styles.Social}>• Ссылки
                             <a href={'https://www.instagram.com/vfadrik/'}>
                                 <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path d="M305,256a49,49,0,1,1-49-49A49,49,0,0,1,305,256Z"/>
@@ -48,7 +48,7 @@ export default function Home() {
                         <span>• Тел: 8-925-62-62-341</span>
                     </div>
                     <div className={styles.SkillsBarWrapper}>
-                        <span>• Знание технологий</span>
+                        <span>• Знание</span>
                         <div className={styles.SkillsBar}>
                             <div><span className={styles.Skill}>Javascript</span></div>
                             <div><span className={styles.Skill}>Typescript</span></div>
@@ -59,7 +59,7 @@ export default function Home() {
                     </div>
 
                     <div className={styles.SkillsBarWrapper}>
-                        <span>• Базовые знания технологий</span>
+                        <span>• Базовые знания</span>
                         <div className={styles.SkillsBar}>
                             <div><span className={styles.Skill}>Sass / Scss</span></div>
                             <div><span className={styles.Skill}>Node.js</span></div>
