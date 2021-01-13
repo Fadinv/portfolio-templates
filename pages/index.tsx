@@ -98,7 +98,7 @@ export default function Home() {
                 <h2 className={styles.Text}>Игры</h2>
 
                 <Templates>
-                    <TemplatesItem src={'/game.jpg'} href={'https://clicker-blond.vercel.app/'}
+                    <TemplatesItem src={'/game1.jpg'} href={'https://clicker-blond.vercel.app/'}
                                    descriptionType={'clicker'}/>
                 </Templates>
 
