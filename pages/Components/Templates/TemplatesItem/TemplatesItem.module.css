@@ -4,7 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+.TemplateItemTitle {
+    font-size: 1.25rem;
+    font-weight: bolder;
+    margin-bottom: .5em;
 }
 
 .PhotoBox {

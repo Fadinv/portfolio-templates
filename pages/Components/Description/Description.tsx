@@ -2,18 +2,19 @@ import React from 'react'
 import styles from './Description.module.css'
 
 interface DescriptionProps {
-    descriptionType: 'clicker' | 'cdlook'
+    ps?: string
+    href?: string
 }
 
-const Description: React.FC<DescriptionProps> = ({descriptionType}) => {
+const Description: React.FC<DescriptionProps> = ({ps, href}) => {
 
     return (
         <div className={styles.Description}>
             <h3>Ссылка на исходный код</h3>
-            <a href={descriptionType === 'clicker' ? 'https://github.com/Fadinv/clicker' : 'https://github.com/Fadinv/cdl'}>
-                {descriptionType === 'clicker' ? 'https://github.com/Fadinv/clicker' : 'https://github.com/Fadinv/cdl'}
+            <a href={href}>
+                {href}
             </a>
-            {descriptionType === 'clicker' ? <p className={styles.Ps}>Ps. Фоновую музыку я написал сам, поэтому дал вам возможность ее отключить :)</p> : null}
+            {!!ps ? <p className={styles.Ps}>{ps}</p> : null}
         </div>
     )
 }

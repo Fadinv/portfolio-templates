@@ -7,12 +7,16 @@ interface TemplatesItemProps {
     src: string
     land?: 1 | 2 | 3
     href?: string
-    descriptionType?: 'clicker' | 'cdlook'
+    description?: boolean
+    ps?: string
+    github?: string
+    title?: string
 }
 
 const TemplatesItem: React.FC<TemplatesItemProps> = (props) => {
     return (
         <div className={styles.TemplatesItem}>
+            {!!props.title ? <span className={styles.TemplateItemTitle}>{props.title}</span> : null}
             <div className={styles.PhotoBox}>
                 {props.href ? <a href={props.href}>
                     <img className={styles.Img} src={props.src}/>
@@ -21,7 +25,7 @@ const TemplatesItem: React.FC<TemplatesItemProps> = (props) => {
                     <img className={styles.Img} src={props.src}/>
                 </Link> : null}
             </div>
-            {props.descriptionType ? <Description descriptionType={props.descriptionType}/>: null}
+            {props.description ? <Description href={props.github} ps={props.ps}/>: null}
         </div>
     );
 };
