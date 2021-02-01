@@ -115,7 +115,7 @@ export default function Home() {
                     <TemplatesItem src={'/game2.png'} href={'https://affectionate-poitras-45c37b.netlify.app/'}
                                    github={'https://github.com/Fadinv/sudoku'}
                                    description title={'Судоку'}
-                                   ps={'Ps. весь алгоритм генерации судоку написан ручками. В исходном коде src/api/api.ts'}/>
+                                   ps={'Ps. Алгоритм не генерирует судоку на ходу, а перемешивает решенный вариант. В исходном коде src/api/api.ts'}/>
                 </Templates>
             </div>
 
