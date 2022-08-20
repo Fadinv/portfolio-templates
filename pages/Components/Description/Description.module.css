@@ -10,18 +10,18 @@
     margin-bottom: .25em;
 }
 .Description > a {
-    color: rgb(45, 45, 150);
+    color: rgb(127, 127, 213);
     transition: color .2s ease-out;
 }
 
 .Description > a:hover {
-    color: rgb(150,45,150);
+    color: rgb(222, 135, 222);
     text-decoration: underline;
 }
 
 .Ps {
     font-size: 1rem;
     font-weight: 300;
-    color: black;
+    color: white;
     font-style: italic;
 }

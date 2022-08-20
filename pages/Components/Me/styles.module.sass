@@ -1,0 +1,67 @@
+.me
+	margin-top: 1em
+	font-size: 1.5rem
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+	*
+		box-sizing: border-box
+
+	&__photo
+		width: 30vh
+		height: 30vh
+		display: block
+		object-fit: cover
+		border-radius: 50%
+		box-shadow: 0 0 .05em .1em black
+
+	&__name
+		margin-top: 1em
+		font-size: 2rem
+		font-weight: bold
+		font-style: italic
+
+	&__infoBar
+		padding: 0 1.5em
+		display: flex
+		width: 100%
+		max-width: 1200px
+		flex-direction: column
+		align-items: flex-start
+
+	&__skillsBarWrapper
+		margin-top: 1em
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+
+	&__skillsBar
+		font-size: 1.4rem
+		width: 100%
+		max-width: 1200px
+		display: flex
+		flex-direction: row
+		justify-content: flex-start
+		align-items: center
+		-ms-flex-wrap: wrap
+		flex-wrap: wrap
+		margin-left: -1em
+		margin-top: -1em
+
+	&__skillsBar > *
+		padding: 1em
+		margin-left: 1em
+		margin-top: 1em
+		white-space: nowrap
+		flex: 1
+
+	&__skill
+		border: .1em solid rgba(#232C38, .3)
+		padding: .5em 1em
+		border-radius: .25em
+		transition: border .3s ease-out
+		&:hover
+			border: .1em solid #232C38
