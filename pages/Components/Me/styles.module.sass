@@ -1,6 +1,9 @@
 .me
-	margin-top: 1em
+	background: linear-gradient(318.97deg, #370045 0%, #B60CE0 100%, rgba(222, 90, 255, 0.87) 100%)
+	box-shadow: 0 0 20px rgba(36, 33, 171, 0.5)
+	border-radius: 0 0 40px 40px
 	font-size: 1.5rem
+	padding-bottom: 2em
 	display: flex
 	flex-direction: column
 	justify-content: center
@@ -9,22 +12,79 @@
 	*
 		box-sizing: border-box
 
+	&__info
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+	&__flexRow
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
 	&__photo
-		width: 30vh
-		height: 30vh
+		background-size: 100%
+		position: relative
+		width: 15vh
+		height: 15vh
+		margin-top: 3em
+		background-position: bottom
+		filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.35))
 		display: block
 		object-fit: cover
 		border-radius: 50%
-		box-shadow: 0 0 .05em .1em black
+		&._big
+			width: 15vh
+			height: 15vh
+
+	&__photoCircle
+		position: absolute
+		top: -2vh
+		left: -2vh
+		right: -2vh
+		bottom: -2vh
+		width: calc(100% + 4vh)
+		height: calc(100% + 4vh)
 
 	&__name
-		margin-top: 1em
+		margin-top: 2em
 		font-size: 2rem
-		font-weight: bold
-		font-style: italic
+		font-weight: 500
+		text-shadow: 0 0 5px rgba(255, 255, 255, 0.3)
+
+	&__job
+		margin-top: .5em
+		font-weight: 300
+		font-size: 1.2rem
+		color: #FFFFFF
+		opacity: .7
+
+	&__socialsBox
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+	&__btn
+		padding: .5em 1em
+		color: #fff
+		background: rgba(#fff, .1)
+		border-radius: 1em
+		outline: none
+		border: none
+		cursor: pointer
+		transition: background .3s ease-out
+
+		&:hover
+			background: rgba(#fff, .25)
 
 	&__infoBar
-		padding: 0 1.5em
+		height: 0
+		transition: height .5s ease-out
+		overflow: hidden
+		padding: 0 2em 0
 		display: flex
 		width: 100%
 		max-width: 1200px
@@ -33,13 +93,14 @@
 
 	&__skillsBarWrapper
 		margin-top: 1em
+		height: max-content
 		width: 100%
 		display: flex
 		flex-direction: column
 		align-items: flex-start
 
 	&__skillsBar
-		font-size: 1.4rem
+		font-size: 1.15rem
 		width: 100%
 		max-width: 1200px
 		display: flex
@@ -52,16 +113,41 @@
 		margin-top: -1em
 
 	&__skillsBar > *
-		padding: 1em
+		padding: .25em 1em
 		margin-left: 1em
 		margin-top: 1em
 		white-space: nowrap
 		flex: 1
 
 	&__skill
-		border: .1em solid rgba(#232C38, .3)
-		padding: .5em 1em
-		border-radius: .25em
-		transition: border .3s ease-out
+		outline: .1em solid rgb(222, 90, 255)
+		padding: .25em 1em
+		border-radius: 1em
+		transition: outline-color .3s ease-out, color .3s ease-out
 		&:hover
-			border: .1em solid #232C38
+			color: rgb(222, 90, 255)
+			outline: .1em solid rgb(222, 90, 255)
+
+@media (min-width: 60em)
+	.me
+		//&__flexRow
+			flex-direction: row
+			justify-content: space-between
+			width: 100%
+			padding: 0 5em
+		//&__info
+			justify-content: flex-start
+			align-items: flex-start
+			margin-left: 5em
+		&__photo
+			width: 30vh
+			height: 30vh
+
+		&__photoCircle
+			position: absolute
+			top: -4vh
+			left: -4vh
+			right: -4vh
+			bottom: -4vh
+			width: calc(100% + 8vh)
+			height: calc(100% + 8vh)

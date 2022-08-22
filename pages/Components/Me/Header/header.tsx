@@ -6,7 +6,7 @@ const Header = () => {
 	return (
 		<div className={styles.header}>
 			{/*<MainLink/>*/}
-			<Socials/>
+
 		</div>
 	);
 };

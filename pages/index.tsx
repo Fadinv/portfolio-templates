@@ -14,7 +14,6 @@ export default function Home() {
 
 	return (
 		<div style={{opacity: isLoaded ? '1' : '0'}} className={styles.Index}>
-			<Header/>
 
 			<Me/>
 
