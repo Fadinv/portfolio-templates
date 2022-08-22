@@ -1,4 +1,5 @@
-import React, {createRef, useEffect, useState} from 'react';
+import {version} from 'os';
+import React, {createRef, useCallback, useEffect, useRef, useState} from 'react';
 import Header from './Header/header';
 import Socials from './Header/Socials/socials';
 import styles from './styles.module.sass';
@@ -6,11 +7,22 @@ import styles from './styles.module.sass';
 const Me = () => {
 	const [showSkills, setShowSkills] = useState(false)
 	const [height, setHeight] = useState(0)
-	const skillsWrapRef = createRef<HTMLDivElement>();
+	const skillsWrapRef = createRef<HTMLDivElement>()
+
+	const setCurrentHeight = () => setHeight(() => skillsWrapRef.current?.getBoundingClientRect().height || 0)
 
 	useEffect(() => {
-		setHeight(skillsWrapRef.current.getBoundingClientRect().height)
-	}, [showSkills])
+		setCurrentHeight()
+	}, [setCurrentHeight, showSkills])
+
+	const update = useRef(() => {
+		setHeight(() => skillsWrapRef.current?.getBoundingClientRect().height || 0)
+	})
+
+	useEffect(() => {
+		window.addEventListener('resize', () => update.current())
+		return window.removeEventListener('resize', () => update.current())
+	}, [update])
 
 	return (
 		<div className={styles.me}>
