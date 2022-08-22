@@ -8,9 +8,38 @@
 	flex-direction: column
 	justify-content: center
 	align-items: center
+	width: 100%
+	z-index: 10
 
 	*
 		box-sizing: border-box
+
+	&._collapse
+		position: fixed
+		padding: .5em
+		border-bottom:
+			left-radius: 1em
+			right-radius: 1em
+		.me
+			&__photo,
+			&__btn
+				display: none
+			&__flexRow
+				width: 100%
+				justify-content: space-between
+			&__info
+				width: 100%
+				flex-direction: row
+				justify-content: flex-start
+				padding: 0 2em
+				> * + *
+					margin-left: 1em
+				> *:last-child
+					margin-left: auto
+			&__name,
+			&__job
+				margin-top: 0
+
 
 	&__info
 		display: flex
@@ -52,11 +81,12 @@
 			transform: rotate(270deg)
 	&__name
 		margin-top: 2em
-		font-size: 2rem
+		font-size: 1.25rem
 		font-weight: 500
 		text-shadow: 0 0 5px rgba(255, 255, 255, 0.3)
 
 	&__job
+		display: none
 		margin-top: .5em
 		font-weight: 300
 		font-size: 1.2rem
@@ -129,6 +159,15 @@
 		&:hover
 			color: rgb(222, 90, 255)
 			outline: .1em solid rgb(222, 90, 255)
+
+@media (min-width: 40em)
+	.me
+		&._collapse
+			.me
+				&__name
+					font-size: 2rem
+				&__job
+					display: unset
 
 @media (min-width: 60em)
 	.me
