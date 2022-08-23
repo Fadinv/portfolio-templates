@@ -124,6 +124,7 @@
 }
 
 .PortfolioStuck {
+    padding: 1em;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -131,6 +132,7 @@
 }
 
 .Text {
+    font-size: 1.5rem;
     text-align: center;
     color: #370045;
     width: 100%;

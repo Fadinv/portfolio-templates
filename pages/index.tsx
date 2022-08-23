@@ -1,4 +1,4 @@
-import React, {createRef, useEffect, useState} from 'react';
+import React, {createRef, useEffect, useRef, useState} from 'react';
 import Header from './Components/Me/Header/header';
 import styles from './index.module.css';
 import TemplatesItem from './Components/Templates/TemplatesItem/TemplatesItem';
@@ -9,14 +9,27 @@ export default function Home() {
 	const [isLoaded, setIsLoaded] = useState<boolean>(false);
 	const [collapseHeader, setCollapseHeader] = useState<boolean>(false);
 	const headerRef = createRef<HTMLDivElement>();
-	const pseudoRef = createRef<HTMLDivElement>();
+	const scrollRef = createRef<HTMLDivElement>();
 
 	useEffect(() => {
 		setIsLoaded(true);
 	}, []);
 
+	const updateCurrentHeight = (scrollTop?: number) => {
+		setCollapseHeader((prev) => {
+			if (!scrollRef.current) return prev;
+			if (!prev) {
+				const calc = scrollTop - headerRef.current?.getBoundingClientRect().height + window.innerHeight * 0.05 > 0
+				return calc;
+			} else {
+				return scrollTop > headerRef.current?.getBoundingClientRect().height - window.innerHeight * 0.05;
+			}
+		});
+	};
+
 	return (
 		<div
+			ref={scrollRef}
 			style={{opacity: isLoaded ? '1' : '0'}} className={styles.Index}
 			onScroll={(event) => {
 				const target = event.target as HTMLDivElement;
@@ -31,13 +44,10 @@ export default function Home() {
 			}}
 		>
 
-			<Me ref={headerRef}/>
-			{collapseHeader && <Me collapseHeader={collapseHeader}/>}
-
-			{/*{collapseHeader && <div ref={pseudoRef} style={{height: 'calc(2em + 270px)', flex: '1 0 auto'}}/>}*/}
+			<Me scrollRef={scrollRef} onResize={updateCurrentHeight} ref={headerRef} collapseHeader={collapseHeader}/>
 
 			<div className={styles.PortfolioStuck}>
-				<h2 className={styles.Text}>Игры</h2>
+				<span className={styles.Text}>My works</span>
 
 				<Templates>
 					<TemplatesItem

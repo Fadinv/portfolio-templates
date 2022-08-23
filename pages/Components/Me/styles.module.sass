@@ -22,7 +22,8 @@
 			right-radius: 1em
 		.me
 			&__photo,
-			&__btn
+			&__btn,
+			&__job
 				display: none
 			&__flexRow
 				width: 100%
@@ -86,7 +87,6 @@
 		text-shadow: 0 0 5px rgba(255, 255, 255, 0.3)
 
 	&__job
-		display: none
 		margin-top: .5em
 		font-weight: 300
 		font-size: 1.2rem
@@ -163,11 +163,12 @@
 @media (min-width: 40em)
 	.me
 		&._collapse
-			.me
-				&__name
-					font-size: 2rem
-				&__job
-					display: unset
+			.me__job
+				display: block
+		&__name
+			font-size: 2rem
+		&__job
+			display: block
 
 @media (min-width: 60em)
 	.me
