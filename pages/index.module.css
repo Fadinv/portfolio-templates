@@ -133,10 +133,11 @@
 .Text_sub {
     text-align: center;
     color: #370045;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     padding: 1.25em 3em;
     max-width: 40em;
     margin: 0 auto;
+    font-style: italic;
 }
 
 .Text {
