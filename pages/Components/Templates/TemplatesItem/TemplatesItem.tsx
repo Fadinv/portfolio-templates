@@ -18,15 +18,15 @@ const TemplatesItem: React.FC<TemplatesItemProps> = (props) => {
         <div className={styles.TemplatesItem}>
             {!!props.title ? <span className={styles.TemplateItemTitle}>
                 {props.title}
-                <a target={'_target'} href={props.href}>
+                <a target={'_blank'} href={props.href}>
                     (кликни сюда, чтобы открыть)
                 </a>
             </span> : null}
             <div className={styles.PhotoBox}>
-                {props.href ? <a target={'_target'} href={props.href}>
+                {props.href ? <a target={'_blank'} href={props.href}>
                     <img className={styles.Img} src={props.src}/>
                 </a> : null}
-                {props.land ? <a target={'_target'} href={`/templates/land${props.land}`}>
+                {props.land ? <a target={'_blank'} href={`/templates/land${props.land}`}>
                     <img className={styles.Img} src={props.src}/>
                 </a> : null}
             </div>
