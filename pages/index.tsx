@@ -50,7 +50,7 @@ export default function Home() {
 			<Hello/>
 			<div className={styles.PortfolioStuck}>
 				<span className={styles.Text}>Мои пет-работы</span>
-				<span className={styles.Text_sub}>"Пока тут я не оставляю коммерческие проекты. Если хотите узнать больше, пишите мне."</span>
+				<span className={styles.Text_sub}>"Пока тут нет моих рабочих проектов, по определенным причинам. Спасибо за понимание)"</span>
 
 				<Templates>
 					<TemplatesItem
