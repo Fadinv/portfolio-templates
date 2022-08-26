@@ -13,6 +13,15 @@
     font-weight: bolder;
     margin-bottom: .5em;
 }
+.TemplateItemTitle a {
+    margin-left: .5em;
+    color: rgb(222, 90, 255);
+    text-decoration: underline;
+}
+
+.TemplateItemTitle a:hover {
+    text-decoration: none;
+}
 
 .PhotoBox {
     border-radius: .2em;

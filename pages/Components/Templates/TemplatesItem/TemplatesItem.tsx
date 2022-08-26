@@ -16,7 +16,12 @@ interface TemplatesItemProps {
 const TemplatesItem: React.FC<TemplatesItemProps> = (props) => {
     return (
         <div className={styles.TemplatesItem}>
-            {!!props.title ? <span className={styles.TemplateItemTitle}>{props.title}</span> : null}
+            {!!props.title ? <span className={styles.TemplateItemTitle}>
+                {props.title}
+                <a target={'_target'} href={props.href}>
+                    (кликни сюда, чтобы открыть)
+                </a>
+            </span> : null}
             <div className={styles.PhotoBox}>
                 {props.href ? <a target={'_target'} href={props.href}>
                     <img className={styles.Img} src={props.src}/>

@@ -50,14 +50,15 @@ export default function Home() {
 			<Hello/>
 			<div className={styles.PortfolioStuck}>
 				<span className={styles.Text}>Мои пет-работы</span>
-				<span className={styles.Text_sub}>"Пока тут нет моих рабочих проектов, по определенным причинам. Спасибо за понимание)"</span>
+				<span className={styles.Text_sub}>"Пока тут нет моих рабочих проектов, по определенным причинам, но мне есть что показать. Все это я написал задолго до получения коммерческого опыта. Спасибо за понимание)"</span>
 
 				<Templates>
 					<TemplatesItem
 						src={'/game1.jpg'} href={'https://clicker-blond.vercel.app/'}
 						github={'https://github.com/Fadinv/clicker'}
 						description title={'Кликер'}
-						ps={'Первое что я написал. Очень простая игра, но очень горжусь этой работой)'}
+						ps={'Первое что я написал. Очень простая игра, но очень горжусь этой работой!\n' +
+							'Ps. Музыку я написал сам, поэтому дал вам возможность ее не включать)'}
 					/>
 					<TemplatesItem
 						src={'/game2.png'}
