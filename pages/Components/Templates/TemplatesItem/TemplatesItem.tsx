@@ -18,12 +18,12 @@ const TemplatesItem: React.FC<TemplatesItemProps> = (props) => {
         <div className={styles.TemplatesItem}>
             {!!props.title ? <span className={styles.TemplateItemTitle}>{props.title}</span> : null}
             <div className={styles.PhotoBox}>
-                {props.href ? <a href={props.href}>
+                {props.href ? <a target={'_target'} href={props.href}>
                     <img className={styles.Img} src={props.src}/>
                 </a> : null}
-                {props.land ? <Link href={`/templates/land${props.land}`}>
+                {props.land ? <a target={'_target'} href={`/templates/land${props.land}`}>
                     <img className={styles.Img} src={props.src}/>
-                </Link> : null}
+                </a> : null}
             </div>
             {props.description ? <Description href={props.github} ps={props.ps}/>: null}
         </div>

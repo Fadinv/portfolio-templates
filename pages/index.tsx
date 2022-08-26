@@ -1,4 +1,5 @@
 import React, {createRef, useEffect, useRef, useState} from 'react';
+import Hello from './Components/Hello/hello';
 import Header from './Components/Me/Header/header';
 import styles from './index.module.css';
 import TemplatesItem from './Components/Templates/TemplatesItem/TemplatesItem';
@@ -46,14 +47,17 @@ export default function Home() {
 
 			<Me scrollRef={scrollRef} onResize={updateCurrentHeight} ref={headerRef} collapseHeader={collapseHeader}/>
 
+			<Hello/>
 			<div className={styles.PortfolioStuck}>
-				<span className={styles.Text}>My works</span>
+				<span className={styles.Text}>Мои пет-работы</span>
+				<span className={styles.Text_sub}>"Пока тут я не оставляю коммерческие проекты. Если хотите узнать больше, пишите мне."</span>
 
 				<Templates>
 					<TemplatesItem
 						src={'/game1.jpg'} href={'https://clicker-blond.vercel.app/'}
 						github={'https://github.com/Fadinv/clicker'}
 						description title={'Кликер'}
+						ps={'Первое что я написал. Очень простая игра, но очень горжусь этой работой)'}
 					/>
 					<TemplatesItem
 						src={'/game2.png'}
