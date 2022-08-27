@@ -10,10 +10,10 @@ const Description: React.FC<DescriptionProps> = ({ps, href}) => {
 
     return (
         <div className={styles.Description}>
-            <h3>Ссылка на исходный код</h3>
-            <a target={'_blank'} href={href}>
+            {href && <h3>Ссылка на исходный код</h3>}
+            {href && <a target={'_blank'} href={href}>
                 {href}
-            </a>
+            </a>}
             {!!ps ? <p className={styles.Ps}>{ps}</p> : null}
         </div>
     )
