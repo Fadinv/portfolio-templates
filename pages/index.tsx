@@ -80,7 +80,7 @@ export default function Home() {
 			</div>
 			<div className={styles.PortfolioStuck}>
 				<span className={styles.Text}>Мои пет-работы</span>
-				<span className={styles.Text_sub}>"Все это я написал задолго до получения коммерческого опыта."</span>
+				<span className={styles.Text_sub}>"Эти примитивы я написал задолго до получения коммерческого опыта."</span>
 
 				<Templates>
 					<TemplatesItem
