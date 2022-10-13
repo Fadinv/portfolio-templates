@@ -1,0 +1,62 @@
+@import '../../../styles/palette'
+@import '../../../styles/mixins'
+
+$class: flex
+
+.#{$class}
+	&._row
+		+row()
+
+		&:not(._pure-box)
+			> * + *
+				margin-left: 12px
+
+		&._wrap
+			margin-left: -12px
+			margin-top: -12px
+			flex-wrap: wrap
+
+			> *
+				margin-left: 12px
+				margin-top: 12px
+
+	&._row-space-between
+		+row(space-between, center)
+
+	&._column
+		+column()
+
+		&:not(._pure-box)
+			> * + *
+				margin-top: 12px
+
+	&._center
+		+row(center)
+
+	&._row-end
+		+row(flex-end, center)
+
+		&:not(._pure-box)
+			> * + *
+				margin-left: 12px
+
+	&._pure-box
+		gap: 0 !important
+
+	&._stretch
+		width: 100%
+		> *
+			flex: 1
+
+	&._box
+		flex: 0 1 auto
+		height: 100%
+		width: 100%
+		align-items: unset
+		justify-content: unset
+
+	&._center-column
+		+column(center)
+
+	&._scrollable
+		overflow: auto

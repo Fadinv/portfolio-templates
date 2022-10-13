@@ -1,0 +1,53 @@
+@import ../../styles/mixins
+
+$class: exp
+
+.#{$class}
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	font-family: 'Poppins', sans-serif
+	font-size: 1.5rem
+	display: flex
+	margin: auto 0
+	width: 100%
+	z-index: 10
+	padding: 5em 2em
+	overflow: auto
+	transition: opacity .8s ease-out
+	flex-direction: column
+	align-items: center
+	overflow-x: hidden
+	opacity: 0
+
+	> * + *
+		margin-top: 2em
+
+	*
+		box-sizing: border-box
+
+	&._loaded
+		opacity: 1
+
+	&._collapse
+		opacity: 0
+
+	&__box
+		display: flex
+		flex-direction: column
+		width: 100%
+		margin: auto 0
+		+column-flex(1em)
+
+	&__box-image
+		width: 100%
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: center
+		box-sizing: border-box
+		border-radius: .5em
+		overflow: hidden
+		box-shadow: .25em .25em 0 $var__purple-10
+		border: .1em solid $var__neutral-black

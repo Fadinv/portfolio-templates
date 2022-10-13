@@ -1,0 +1,80 @@
+@import ../../styles/palette
+
+$class: box
+
+.#{$class}
+	border-radius: 1em
+	padding: 1em
+	background-color: rgba(#000, .1)
+	border: .1em solid $var__purple-10
+	display: flex
+	margin-left: auto
+	margin-right: auto
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+	> * + *
+		margin-top: 1em
+
+	&__caption
+		display: flex
+		justify-content: center
+		text-transform: lowercase
+		font-weight: 600
+		width: 100%
+
+		> * + *
+			margin-left: .5em
+
+	&__caption-text
+		white-space: nowrap
+
+	&__caption-line
+		margin-top: auto
+		margin-bottom: auto
+		width: 0
+		height: 1px
+		background-color: $var__purple-10
+		transition: opacity 3s ease-out, width 5s ease-out
+		opacity: 0
+
+		&._animate
+			width: 100%
+			opacity: 1
+
+	&__wrapper
+		height: max-content
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+	&__inner
+		font-size: 1.15rem
+		max-width: 1200px
+		display: flex
+		flex-direction: row
+		justify-content: flex-start
+		align-items: center
+		-ms-flex-wrap: wrap
+		flex-wrap: wrap
+		margin-left: -1em
+		margin-top: -1em
+
+		> *
+			padding: .25em 1em
+			margin-left: 1em
+			margin-top: 1em
+			white-space: nowrap
+			flex: 1
+
+	&__el
+		border: .1em solid rgb(222, 90, 255)
+		padding: .25em 1em
+		border-radius: 1em
+		transition: outline-color .3s ease-out, color .3s ease-out
+
+		&:hover
+			color: rgb(222, 90, 255)

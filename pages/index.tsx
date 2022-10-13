@@ -2,12 +2,12 @@ import cn from 'classnames';
 import React, {createRef, useEffect, useState} from 'react';
 import {useDispatch} from 'react-redux';
 import {change} from '../features/page/pageSlice'
-import AboutMe from './Components/AboutMe/aboutMe';
-import Contacts from './Components/Contacts/contacts';
-import Exp from './Components/Exp/exp';
-import Me from './Components/Me/me';
-import Menu from './Components/Menu/Menu';
-import Skills from './Components/Skills/skills';
+import AboutMe from '../Components/AboutMe/aboutMe';
+import Contacts from '../Components/Contacts/contacts';
+import Exp from '../Components/Exp/exp';
+import Me from '../Components/Me/me';
+import Menu from '../Components/Menu/Menu';
+import Skills from '../Components/Skills/skills';
 import styles from './index.module.sass';
 
 export default function Home() {
