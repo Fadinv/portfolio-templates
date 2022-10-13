@@ -10,6 +10,7 @@ const MainLink = () => {
 			className={styles.mainLink}
 		>
 			F
+
 		</div>
 	);
 };
