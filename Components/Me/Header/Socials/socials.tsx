@@ -22,7 +22,7 @@ const Socials = () => {
 						transform="translate(0 -117.75)"/>
 				</svg>
 			</a>
-			<a target={'_blank'} href={'https://t.me/vfadin'}>
+			<a target={'_blank'} href={'https://t.me/vfadrik'}>
 				<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
 				     height="50px">
 					<path
