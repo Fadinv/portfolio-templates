@@ -1,0 +1,100 @@
+@import "palette"
+
+$transition-duration: .2s
+$timing-function: easy-out
+
+@mixin focused()
+	+transition(box-shadow)
+
+	&:focus
+		box-shadow: 0 0 0 2px $var__focus-shadow
+
+// Прокидывает flex-row на элемент и ставит левый отступ для каждого элемента, кроме первого
+@mixin row-flex($pix: null, $align: center, $pos: null)
+	display: flex
+	align-items: $align
+	@if $pos
+		justify-content: $pos
+	@if $pix
+		> * + *
+			margin-left: $pix
+
+@mixin row-flex-wrap($pix_horiz: null, $pix_vert: $pix_horiz, $pos: null, $align: center)
+	display: flex
+	align-items: $align
+	flex-wrap: wrap
+	@if $pos
+		justify-content: $pos
+	@if $pix_vert
+		margin-top: -$pix_vert
+		> *
+			margin-top: $pix_vert
+	@if $pix_horiz
+		margin-left: -$pix_horiz
+		> *
+			margin-left: $pix_horiz
+
+@mixin row($pos: null, $align: $pos)
+	display: flex
+	@if $pos
+		justify-content: $pos
+	@if $align
+		align-items: $align
+
+@mixin column($pos: null, $align: $pos)
+	display: flex
+	flex-direction: column
+	@if $pos
+		justify-content: $pos
+	@if $align
+		align-items: $align
+
+// Прокидывает flex-column на элемент и ставит верхний отступ для каждого элемента, кроме первого
+@mixin column-flex($pix: null, $pos: null, $align: $pos)
+	+column($pos, $align)
+	@if $pix
+		> * + *
+			margin-top: $pix
+
+@mixin font($size, $line-height: null, $font-weight: null)
+	font-size: $size
+	@if $line-height
+		line-height: $line-height
+	@if $font-weight
+		font-weight: $font-weight
+
+@mixin fixed-width($width)
+	min-width: $width
+	max-width: $width
+
+@mixin flex-width($width)
+	min-width: $width
+	max-width: 100%
+	flex: 1
+
+@mixin fixed-height($width)
+	min-height: $width
+	max-height: $width
+
+@mixin fixed-size($size)
+	+fixed-width($size)
+	+fixed-height($size)
+
+@mixin transition-all($props...) // Анимирует каждое свойство со стандартными значениями
+	$property: ()
+	$duration: ()
+	$function: ()
+	@for $i from 1 through length($props)
+		$property: append($property, nth($props, $i))
+		$duration: append($duration, $transition-duration)
+		$function: append($function, $timing-function)
+		@if $i != length($props)
+			$property: append($property, unquote($string: ","))
+			$duration: append($duration, unquote($string: ","))
+			$function: append($function, unquote($string: ","))
+	+transition($property, $duration, $function)
+
+@mixin transition($property, $duration: $transition-duration, $function: $timing-function)
+	transition-property: $property
+	transition-duration: $duration
+	transition-timing-function: $function

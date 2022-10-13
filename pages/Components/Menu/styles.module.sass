@@ -1,0 +1,99 @@
+@import styles/mixins
+@import styles/breakpoints
+@import styles/palette
+
+$class: menu
+
+.#{$class}
+	position: fixed
+	z-index: 20
+	left: 0
+	right: 0
+	font-family: 'Poppins', sans-serif
+	font-size: 1rem
+	display: flex
+	justify-content: space-between
+	background-color: $var__purple-80
+	padding: 0 2rem
+	margin: 0 auto
+	border-bottom: .1em solid $var__purple-10
+	transition: opacity .8s ease-out, top .3s ease-out
+	opacity: 0
+	top: -3em
+
+	> * + *
+		margin-left: 2em
+
+	&._animate
+		top: 0
+		opacity: 1
+
+	&__inner
+		width: 100%
+		max-width: $size__l
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+
+		> * + *
+			margin-left: 2em
+
+	&__job
+		display: flex
+		align-items: center
+		justify-content: center
+		color: $var__white
+		text-shadow: 0 0 5px rgba($var__purple-10, 1)
+		font-weight: 600
+	&__left-box
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: .5em 0
+		> * + *
+			margin-left: 1em
+	&__to-home
+		background-image: url(/me1.jpeg)
+		+fixed-size(2em)
+		background-size: cover
+		background-position: bottom
+		background-repeat: no-repeat
+		border-radius: 50%
+		box-shadow: 0 0 .1em 3px rgba(#000, .25)
+		border: .1em solid $var__neutral-white
+		cursor: pointer
+
+	&__button-box
+		height: 100%
+
+	&__el
+		height: 100%
+		position: relative
+		background-color: unset
+		border: none
+		color: $var__green-15
+		padding: .5em 1em
+		font-size: 1rem
+		white-space: nowrap
+		transition: background-color .3s ease-out, left .3s ease-out, right .3s ease-out, bottom .3s ease-out, top .3s ease-out, opacity .3s ease-out, box-shadow .3s ease-out, color .3s ease-out
+		cursor: pointer
+
+
+		&:first-child
+			//border-left: none
+
+		&:hover
+			background-color: $var__purple-100
+			color: $var__purple-10
+		&:active
+			background-color: $var__purple-10
+			color: $var__white
+		&._active
+			background-color: $var__purple-100
+			color: $var__purple-10
+			cursor: unset
+
+@media (max-width: 40em)
+	.#{$class}
+		&__job
+			display: none

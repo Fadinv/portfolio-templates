@@ -1,0 +1,50 @@
+@import styles/mixins
+
+$class: about-me
+
+.#{$class}
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	font-family: 'Poppins', sans-serif
+	font-size: 1.5rem
+	display: flex
+	margin: auto 0
+	width: 100%
+	z-index: 10
+	padding: 5em
+	overflow: auto
+	transition: opacity .8s ease-out
+	flex-direction: column
+	text-align: left
+	opacity: 0
+
+	*
+		box-sizing: border-box
+
+	> * + *
+		margin-top: 1em
+
+	&._loaded
+		opacity: 1
+
+	&._collapse
+		opacity: 0
+
+	&__title
+		font-size: 1.5em
+		font-weight: 600
+		margin-top: 2em
+		&:first-child
+			margin-top: 0
+
+	&__text-box
+		font-size: .8em
+		background-color: rgba(#000, .1)
+		border-radius: 1em
+		width: 100%
+		padding: 1em
+		border: .1em solid $var__purple-10
+		text-align: left

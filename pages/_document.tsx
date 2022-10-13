@@ -10,9 +10,10 @@ static async getInitialProps(ctx) {
 render() {
     return (
         <Html>
+            <script src="https://kit.fontawesome.com/e4ca7511c0.js" crossOrigin="anonymous"></script>
             <Head>
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
-                <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet"/>
+                <link rel="icon" href="/favicon.svg" />
             </Head>
             <body>
 
