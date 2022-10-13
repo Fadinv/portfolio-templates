@@ -1,7 +1,6 @@
 import cn from 'classnames';
 import React, {useState} from 'react';
 import {InView} from 'react-intersection-observer';
-import {UIKFlex} from '../UIKit/Flex/UIKFlex';
 import ExpElement from './ExpElement/ExpElement';
 import css from './styles.module.sass';
 
