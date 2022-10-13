@@ -20,4 +20,4 @@ export const mobileMenuSlice = createSlice({
 
 export const {open, close} = mobileMenuSlice.actions;
 
-export default mobileMenuSlice.reducer;
+export const mobileMenuReducer = mobileMenuSlice.reducer;

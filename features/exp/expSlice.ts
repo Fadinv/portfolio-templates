@@ -28,6 +28,4 @@ export const expSlice = createSlice({
 	reducers: {},
 });
 
-export const {} = expSlice.actions;
-
-export default expSlice.reducer;
+export const expReducer = expSlice.reducer;

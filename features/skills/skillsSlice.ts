@@ -38,12 +38,10 @@ const initialState: SkillsState = {
 	],
 };
 
-export const meSlice = createSlice({
+export const skillsSlice = createSlice({
 	name: 'me',
 	initialState,
 	reducers: {},
 });
 
-export const {} = meSlice.actions;
-
-export default meSlice.reducer;
+export const skillsReducer = skillsSlice.reducer;
